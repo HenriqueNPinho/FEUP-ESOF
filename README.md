@@ -3,12 +3,15 @@
 
 |      Name     |     e-mail      |
 |---------------|-----------------|
-|Henrique Pinho |up201805000@up.pt|
-|Tiago Gonçalves|up201905179@up.pt|
-|Pedro Santos   |up201904529@up.pt|
-|Mónica Araújo  |up202005209@up.pt|
 |Flávio Vaz     |up201509918@up.pt|
+|Henrique Pinho |up201805000@up.pt|
 |Miguel Valente |up201704608@up.pt|
+|Mónica Araújo  |up202005209@up.pt|
+|Pedro Santos   |up201904529@up.pt|
+|Tiago Gonçalves|up201905179@up.pt|
+
+
+
 
 # Product Name
 
@@ -16,30 +19,17 @@
 
 ### Vision Statement
 
-Start by defining a clear and concise vision for your module, to help members of the team, contributors, and users into focusing their often disparate views into a concise, visual, and short textual form. It provides a "high concept" of the product for marketers, developers, and managers.
-
-A product vision describes the essential of the product and sets the direction to where a product is headed, and what the product will deliver in the future. 
-
-**We favor a catchy and concise statement, ideally one sentence.**
-
-We suggest you use the product vision template described in the following link:
-* [How To Create A Convincing Product Vision To Guide Your Team, by uxstudioteam.com](https://uxstudioteam.com/ux-blog/product-vision/)
-
-To learn more about how to write a good product vision, please see also:
-* [Product Management: Product Vision, by ProductPlan](https://www.productplan.com/glossary/product-vision/)
-* [Vision, by scrumbook.org](http://scrumbook.org/value-stream/vision.html)
-* [How to write a vision, by dummies.com](https://www.dummies.com/business/marketing/branding/how-to-write-vision-and-mission-statements-for-your-brand/)
-* [20 Inspiring Vision Statement Examples (2019 Updated), by lifehack.org](https://www.lifehack.org/articles/work/20-sample-vision-statement-for-the-new-startup.html)
+O nosso objetivo é fornecer as pessoas uma forma mais eficaz e ecologica para reservar a sua vez de atendimento na secretaria da FEUP. Tencionamos que os utilizadores possam ver em tempo real o numero da senha atual sem ter de se deslocar à secretaria evitando a formaçao desnecessaria de filas.
 
 
 ### Main Features
-Indicate an  initial/tentative list of high-level features - high-level capabilities or desired services of the system that are necessary to deliver benefits to the users (cf. RUP).
- - Feature 1 - Short description
- - Feature 2 - Short description
-...
+ - Feature 1 - Tirar senha online
+ - Feature 2 - Aviso quando faltar 5
+ - Feature 3 - ver em que senha vai
+ - Feature 4 - ter a senha digital, evitando usar papel
+
+
 
 ### Assumptions and dependencies
-Indicate an  initial/tentative list of assumptions and dependencies 
 
-- Student timetable from sigarra
-- 
+- Numero atual da senha em tempo real
