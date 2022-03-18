@@ -13,23 +13,22 @@
 
 
 
-# Product Name
-
-## Product Vision
+# UniTicket
 
 ### Vision Statement
 
-O nosso objetivo é fornecer as pessoas uma forma mais eficaz e ecologica para reservar a sua vez de atendimento na secretaria da FEUP. Tencionamos que os utilizadores possam ver em tempo real o numero da senha atual sem ter de se deslocar à secretaria evitando a formaçao desnecessaria de filas.
+O nosso objetivo é fornecer as pessoas uma forma ecologica para reservar a sua vez de atendimento na secretaria da FEUP. Tencionamos que os utilizadores possam ver em tempo real o numero da senha atual sem ter de se deslocar à secretaria e perder tempo desnecessario.
 
 
 ### Main Features
- - Feature 1 - Tirar senha online
- - Feature 2 - Aviso quando faltar 5
- - Feature 3 - ver em que senha vai
- - Feature 4 - ter a senha digital, evitando usar papel
-
+ - Feature 1 - Tirar/cancelar senha online 
+ - Feature 2 - Notificação previa da vez
+ - Feature 3 - Ver o numero da senha atual
+ - Feature 4 - Qr code como forma de validação
 
 
 ### Assumptions and dependencies
 
 - Numero atual da senha em tempo real
+- Tipo de senha a ser atendida
+- 
