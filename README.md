@@ -32,3 +32,4 @@ With all of this, our objective is that the users can monitor em real time the s
 
 - Current number in real time
 - Service type 
+- Connection between the feature and the physical ticket machine
