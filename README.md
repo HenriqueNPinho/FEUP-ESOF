@@ -25,6 +25,7 @@ Tencionamos que os utilizadores possam monitorizar em tempo real o estado das fi
  - Feature 2 - Prior notification of the student's turn - To avoid delays, the application can, for example, send a notification when the queue is 5 positions from the student's one.
  - Feature 4 -QR Code to validate the student presence
  - Feature 5 - Student's can have access to average wait time.
+ - Feature 6 - Abuse control - One student can only take 1 ticket per hour and/or if he doesn't validate the ticket and/or doesn't show up get's 1 day ban
 
 
 ### Assumptions and dependencies
