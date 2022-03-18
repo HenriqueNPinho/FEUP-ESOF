@@ -16,9 +16,9 @@
 
 ### Vision Statement
 
-O nosso objectivo é fornecer as pessoas uma forma mais ecologica e amiga do estudante para reservar a sua vez de atendimento na secretaria da FEUP e evitar filas de espera.
+O nosso objectivo é fornecer as pessoas uma forma mais ecológica, moderna e amiga do estudante para reservar a sua vez de atendimento na secretaria da FEUP e evitar filas de espera.
 
-Tencionamos que os utilizadores possam monitorizar em tempo real o estado das filas, tirar a senha e receber uma notificação quando estiver proximo da sua vez sem ter de se deslocar à secretaria e perder tempo desnecessario.
+Tencionamos que os utilizadores possam monitorizar em tempo real o estado das filas, tirar a senha e receber uma notificação quando estiver proximo da sua vez sem ter de se deslocar à secretaria , valorizando assim algo extremamente importante na vida de todos nós : o tempo .
 
 ### Main Features
  - Feature 1 - Tirar/cancelar senha online 
