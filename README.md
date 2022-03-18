@@ -16,9 +16,9 @@
 
 ### Vision Statement
 
-O nosso objectivo é fornecer as pessoas uma forma mais ecológica, moderna e amiga do estudante para reservar a sua vez de atendimento na secretaria da FEUP e evitar filas de espera.
+Our objective is allow people to book/schedule their meet with the secretarians of the FEUP in a more ecological and modern way. To achive this we pretend to make an app that manages all the tickets of the users.
 
-Tencionamos que os utilizadores possam monitorizar em tempo real o estado das filas, tirar a senha e receber uma notificação quando estiver proximo da sua vez sem ter de se deslocar à secretaria , valorizando assim algo extremamente importante na vida de todos nós : o tempo .
+With all of this, our objective is that the users can monitor em real time the state of the queues, take a ticket and get a notification whenever the user turn arrives without having to go to the physical place valuing something extremely important in the lives of all of us: time!
 
 ### Main Features
  - Feature 1 - withdraw/cancel ticket online
