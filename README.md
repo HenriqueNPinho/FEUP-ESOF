@@ -21,14 +21,13 @@ O nosso objectivo é fornecer as pessoas uma forma mais ecológica, moderna e am
 Tencionamos que os utilizadores possam monitorizar em tempo real o estado das filas, tirar a senha e receber uma notificação quando estiver proximo da sua vez sem ter de se deslocar à secretaria , valorizando assim algo extremamente importante na vida de todos nós : o tempo .
 
 ### Main Features
- - Feature 1 - Tirar/cancelar senha online 
- - Feature 2 - Notificação previa da vez
- - Feature 3 - Ver o numero da senha atual
- - Feature 4 - Qr code como forma de validação
- - Feature 5 - Visualizar o tempo médio de espera 
+ - Feature 1 - withdraw/cancel ticket online
+ - Feature 2 - Prior notification of the student's turn - To avoid delays, the application can, for example, send a notification when the queue is 5 positions from the student's one.
+ - Feature 4 -QR Code to validate the student presence
+ - Feature 5 - Student's can have access to average wait time.
 
 
 ### Assumptions and dependencies
 
-- Numero atual da senha em tempo real
-- Tipo de senha a ser atendida
+- Current number in real time
+- Service type 
