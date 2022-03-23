@@ -26,13 +26,13 @@ Briefly describe each use case mentioning the following:
 Example:
 |||
 | --- | --- |
-| *Name* | Purchase tickets online |
-| *Actor* |  Customer | 
-| *Description* | The customer purchases one or more tickets for an event, using an electronic payment method, having the option to choose places. |
-| *Preconditions* | - The customer has electronic payment means. <br> - The event has tickets available on-sale. |
-| *Postconditions* | - The customer gets the electronic tickets with a QR code. <br> - The customer is charged of the tickets’ cost, and the seller credited. <br> - Information of tickets sold & seats available for the event is updated. |
-| *Normal flow* | 1. The customer accesses the web page of the ticketing system.<br> 2. The system shows the list of events with tickets on-sale.<br> 3. The customer selects the event and the number of tickets.<br> 4. If wanted, the costumer may Choose Places.<br> 5. The system shows the total price to pay.<br> 6. The system redirects the customer to Electronic Payment.<br> 7. The system delivers the electronic tickets to the customer with a unique identifier and QR code. |
-| *Alternative flows and exceptions* | 1. [Payment failure] If, in step 6 of the normal flow the payment fails, the system gives the user the possibility to cancel or retry. |
+| *Name* | UniTicket |
+| *Actor* | Utilizador da aplicação | 
+| *Description* | O utilizador tira a senha online para a secretaria podendo escolher o tipo de serviço academico, bem como tem a opçao de a cancelar.|
+| *Preconditions* | - O utilizador tem a aplicação Uni instalada e está autenticado. <br> - A secretaria esta em funcionamento. <br> - (**Colocar mais pre condiçoes**) |
+| *Postconditions* | - O utilizador fica na posse da senha digital  <br> - O utilizador tem a sua vez reservada. <br> - O numero da proxima senha a ser tirada é atualizado. <br> - (**colocar mais postconditions se necessario**) |
+| *Normal flow* | 1. O utilizador entra na aplicação Uni e entra na aba das senhas. <br> 2. A aplicaçao mostra quais os serviçoes disponiveis e o numero da senha atual. <br> 3. O utilizador seleciona o serviço pretendido. <br> 4. O sistema pede confirmação. <br> 5. o Utilizador recebe a senha digital com o numero correspondente. <br> 5. o utilizador é notificado quando faltarem 5 senhas para ser atendido. <br> 6. O utilizador valida a sua presença lendo o QR code à porta da secretaria <br> 7. o utilizador é atendido. |
+| *Alternative flows and exceptions* | 1. [Cancelamento de senha] No passo 5, se o utilizador pretender cancelar a senha, este pode-a cancelar. <br> 2. [Falta de presença] No passo 6 caso o utilizador nao marque a sua presença a senha é automaticamente cancelada e uma sançao de tempo é aplicada. <br> 3. ( **adicionar mais se necessario** ) |
 
 ### User stories
 The user stories should be created as GitHub issues. Therefore, this section will *not* exist in your report, it is here only to explain how you should describe the requirements of the product as **user stories**. 
