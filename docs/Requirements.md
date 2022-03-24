@@ -45,13 +45,13 @@ Briefly describe each use case mentioning the following:
 
 |||
 | --- | --- |
-| *Name* |Cancel ticket|
-| *Actor* | Student | 
-| *Description* |The user can cancel his appointment any time before his turn.|
-| *Preconditions* |- The Student has the "Uni" app. <br> - The Student has a valid online ticket <br> (**colocar mais/corrigir se necessário**) |
-| *Postconditions* | - If the number of taken tickets that day was less than 3, the Student gets half-hour ban until he's able to take another one, otherwise gets an 24 hours sanction. <br> - The Student loses his turn.<br> (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* | 1. The Student enters the Uni app and opens the tickets tab. <br> 2.  The user cancel his appointment. <br>  (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* ||
+| *Name* |Cancel the ticket|
+| *Actor* | User | 
+| *Description* | The user can cancel his appointment any time before (up to 10 minutes before) his turn. |
+| *Preconditions* | -The user must have taken a ticket online in the Uni app.(**colocar mais/corrigir se necessário**) |
+| *Postconditions* |  -The user can´t reach a maximum of 3 cancelations.(**colocar mais/corrigr se necessário**) | 
+| *Normal flow* | 1. The user takes his ticket in the Uni app. <br> 2. The user can cancel his appointment.  (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* | 1. If the user cancels up to 3 tickets in the same day he will no longer will be able to take another ticket in the same day. |
 
 |||
 | --- | --- |
