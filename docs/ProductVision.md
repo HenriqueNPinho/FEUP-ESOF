@@ -2,7 +2,7 @@
 
 ## Vision Statement
 
-Our objective is allow people to book/schedule their meet with the secretarians of the FEUP in a more ecological and modern way. To achive this we pretend to make an feature to the UNI app that manages all the tickets of the users.
+Our objective is allow people to book/schedule their meet with the Academic Services of FEUP in a more ecological and modern way. To achive this we pretend to make an feature to the UNI app that manages all the tickets of the users.
 
 With all of this, our objective is that the users can monitor em real time the state of the queues, take a ticket and get a notification whenever the user turn arrives without having to go to the physical place valuing something extremely important in the lives of all of us: time!
 

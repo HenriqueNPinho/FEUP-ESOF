@@ -1,8 +1,6 @@
 # Requirements
 
-In this section, you should describe all kinds of requirements for your module: functional and non-functional requirements.
-
-### Use case model 
+## Use case model 
 
 Create a use-case diagram in UML with all high-level use cases possibly addressed by your module, to clarify the context and boundaries of your application.
 
@@ -10,7 +8,7 @@ Give each use case a concise, results-oriented name. Use cases should reflect th
 
 Example:
  <p align="center" justify="center">
-  <img src="https://github.com/LEIC-ES-2021-22/templates/blob/main/images/UseCaseView.png"/>
+  <img src=""/>
 </p>
 
 
@@ -22,19 +20,51 @@ Briefly describe each use case mentioning the following:
 
 * **Normal Flow**. Provide a detailed description of the user actions and system responses that will take place during execution of the use case under normal, expected conditions. This dialog sequence will ultimately lead to accomplishing the goal stated in the use case name and description. This is best done as a numbered list of actions performed by the actor, alternating with responses provided by the system. 
 * **Alternative Flows and Exceptions**. Document other, legitimate usage scenarios that can take place within this use case, stating any differences in the sequence of steps that take place. In addition, describe any anticipated error conditions that could occur during execution of the use case, and define how the system is to respond to those conditions. 
+* 
 
-Example:
+
 |||
 | --- | --- |
-| *Name* | UniTicket |
-| *Actor* | Utilizador da aplicação | 
-| *Description* | O utilizador tira a senha online para a secretaria podendo escolher o tipo de serviço academico, bem como tem a opçao de a cancelar.|
-| *Preconditions* | - O utilizador tem a aplicação Uni instalada e está autenticado. <br> - A secretaria esta em funcionamento. <br> - (**Colocar mais pre condiçoes**) |
-| *Postconditions* | - O utilizador fica na posse da senha digital  <br> - O utilizador tem a sua vez reservada. <br> - O numero da proxima senha a ser tirada é atualizado. <br> - (**colocar mais postconditions se necessario**) |
-| *Normal flow* | 1. O utilizador entra na aplicação Uni e entra na aba das senhas. <br> 2. A aplicaçao mostra quais os serviçoes disponiveis e o numero da senha atual. <br> 3. O utilizador seleciona o serviço pretendido. <br> 4. O sistema pede confirmação. <br> 5. o Utilizador recebe a senha digital com o numero correspondente. <br> 5. o utilizador é notificado quando faltarem 5 senhas para ser atendido. <br> 6. O utilizador valida a sua presença lendo o QR code à porta da secretaria <br> 7. o utilizador é atendido. |
-| *Alternative flows and exceptions* | 1. [Cancelamento de senha] No passo 5, se o utilizador pretender cancelar a senha, este pode-a cancelar. <br> 2. [Falta de presença] No passo 6 caso o utilizador nao marque a sua presença a senha é automaticamente cancelada e uma sançao de tempo é aplicada. <br> 3. ( **adicionar mais se necessario** ) |
+| *Name* | Take online ticket |
+| *Actor* | User | 
+| *Description* |The user takes one online ticket to Academic Services, (**having the option to choose the area**). |
+| *Preconditions* | - The user has the "Uni" app. <br>  - The Academic Services are working <br> -The User has not tacken a ticket in the last half-hour or didn't failed to show up in his turn in the last 24 hours. <br> (**colocar mais/corrigir se necessário**) |
+| *Postconditions* | - User was given a ticket. <br> - The User is guaranteed their turn <br> -The number in the next ticket is updated (**colocar mais/corrigr se necessário**) | 
+| *Normal flow* | 1. The User enters the Uni app and opens the tickets tab. <br> 2. The User can choose between the different areas to take a ticket. <br> 3. The User takes one ticket <br> 4.The User receives the number. <br> 5.The user is notified when the current ticket number is 5 numbers before his. <br> 6.The user enters Academic Services in his turn. (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* | 1. [Ticket Cancelation (?)] After receiving the ticket, the User is free to cancel it with a maximum of 3 cancelations/day <br> 2.[Missing turn] In case of the User failes to show up is given an time sanction of 24 hours <br> 3.[](**colocar mais/corrigr se necessário**)<br>|
 
-### User stories
+|||
+| --- | --- |
+| *Name* | Choose Area (**poderá não ser necessário, deixar para o fim**)|
+| *Actor* | User | 
+| *Description* | |
+| *Preconditions* |(**colocar mais/corrigir se necessário**) |
+| *Postconditions* |  (**colocar mais/corrigr se necessário**) | 
+| *Normal flow* |  (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* ||
+
+|||
+| --- | --- |
+| *Name* |Cancel the ticket|
+| *Actor* | User | 
+| *Description* | |
+| *Preconditions* |(**colocar mais/corrigir se necessário**) |
+| *Postconditions* |  (**colocar mais/corrigr se necessário**) | 
+| *Normal flow* |  (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* ||
+
+|||
+| --- | --- |
+| *Name* ||
+| *Actor* | | 
+| *Description* | |
+| *Preconditions* |(**colocar mais/corrigir se necessário**) |
+| *Postconditions* |  (**colocar mais/corrigr se necessário**) | 
+| *Normal flow* |  (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* ||
+
+
+## User stories
 The user stories should be created as GitHub issues. Therefore, this section will *not* exist in your report, it is here only to explain how you should describe the requirements of the product as **user stories**. 
 
 A user story is a description of desired functionality told from the perspective of the user or customer. A starting template for the description of a user story is 
@@ -59,12 +89,12 @@ At the end, it is good to add a rough indication of the value of the user story 
 
 
 
-### Domain model
+## Domain model
 
 To better understand the context of the software system, it is very useful to have a simple UML class diagram with all the key concepts (names, attributes) and relationships involved of the problem domain addressed by your module. 
 Also provide a short textual description of each class. 
 
 Example:
  <p align="center" justify="center">
-  <img src="https://github.com/LEIC-ES-2021-22/templates/blob/main/images/DomainModel.png"/>
+  <img src=""/>
 </p>
