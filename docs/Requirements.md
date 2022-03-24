@@ -29,7 +29,7 @@ Example:
 | *Name* | UniTicket |
 | *Actor* | Utilizador da aplicação | 
 | *Description* | O utilizador tira a senha online para a secretaria podendo escolher o tipo de serviço academico, bem como tem a opçao de a cancelar.|
-| *Preconditions* | - O utilizador tem a aplicação Uni instalada e está autenticado. <br> - A secretaria esta em funcionamento. <br> - (**Colocar mais pre condiçoes**) |
+| *Preconditions* | - O utilizador tem a aplicação Uni instalada e está autenticado. <br> - A secretaria esta em funcionamento. <br> - Será possível marcar para outros dias? Ou só no dia atual e no horário de funcionamento da secretaria ? (**Colocar mais pre condiçoes**) |
 | *Postconditions* | - O utilizador fica na posse da senha digital  <br> - O utilizador tem a sua vez reservada. <br> - O numero da proxima senha a ser tirada é atualizado. <br> - (**colocar mais postconditions se necessario**) |
 | *Normal flow* | 1. O utilizador entra na aplicação Uni e entra na aba das senhas. <br> 2. A aplicaçao mostra quais os serviçoes disponiveis e o numero da senha atual. <br> 3. O utilizador seleciona o serviço pretendido. <br> 4. O sistema pede confirmação. <br> 5. o Utilizador recebe a senha digital com o numero correspondente. <br> 5. o utilizador é notificado quando faltarem 5 senhas para ser atendido. <br> 6. O utilizador valida a sua presença lendo o QR code à porta da secretaria <br> 7. o utilizador é atendido. |
 | *Alternative flows and exceptions* | 1. [Cancelamento de senha] No passo 5, se o utilizador pretender cancelar a senha, este pode-a cancelar. <br> 2. [Falta de presença] No passo 6 caso o utilizador nao marque a sua presença a senha é automaticamente cancelada e uma sançao de tempo é aplicada. <br> 3. ( **adicionar mais se necessario** ) |
