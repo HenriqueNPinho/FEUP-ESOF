@@ -37,31 +37,31 @@ Briefly describe each use case mentioning the following:
 | --- | --- |
 | *Name* | Choose Area (**poderá não ser necessário, deixar para o fim**)|
 | *Actor* | User | 
-| *Description* | |
-| *Preconditions* |(**colocar mais/corrigir se necessário**) |
-| *Postconditions* |  (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* |  (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* ||
+| *Description* | The User can choose the type of service he wants implicit in his ticket |
+| *Preconditions* | -The User must login into his Uni account so that he can see and choose an option between the other alternatives. (**colocar mais/corrigir se necessário**) |
+| *Postconditions* |  -After he chooses his choice he can procede to take the online ticket. (**colocar mais/corrigr se necessário**) | 
+| *Normal flow* |  1. The User logs into the Uni app and opens the tickets tab. <br> 2. The User chooses between the different areas to take a ticket. <br>(**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* | In this case model there is nothing that can go wrong **KKKKKKKK(:KKKKK**|
 
 |||
 | --- | --- |
 | *Name* |Cancel the ticket|
 | *Actor* | User | 
-| *Description* | |
-| *Preconditions* |(**colocar mais/corrigir se necessário**) |
-| *Postconditions* |  (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* |  (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* ||
+| *Description* | The user can cancel his appointment any time before his turn. |
+| *Preconditions* | -The user must have taken a ticket online in the Uni app.(**colocar mais/corrigir se necessário**) |
+| *Postconditions* |  -The user can´t reach a maximum of 3 cancelations.(**colocar mais/corrigr se necessário**) | 
+| *Normal flow* | 1. The user takes his ticket in the Uni app. <br> 2. The user can cancel his appointment.  (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* | 1. If the user cancels up to 3 tickets in the same day he will no longer will be able to take another ticket in the same day. |
 
 |||
 | --- | --- |
-| *Name* ||
-| *Actor* | | 
-| *Description* | |
-| *Preconditions* |(**colocar mais/corrigir se necessário**) |
-| *Postconditions* |  (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* |  (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* ||
+| *Name* | Take Paper Ticket |
+| *Actor* | User/Guest | 
+| *Description* | Both User and Visitor can take an paper ticket in the Academic Services of FEUP |
+| *Preconditions* | -There are no flaws in the Academic Services system (**colocar mais/corrigir se necessário**) |
+| *Postconditions* | -The individual waits up to his turn. (**colocar mais/corrigr se necessário**) | 
+| *Normal flow* |  1. The individual that takes the ticket gets a number related to his turn and he waits until his turn to show up. (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* | 1. If the individual misses his turn by a maximum of 3 turns the secretarians can still attend his request. |
 
 
 ## User stories
@@ -70,6 +70,12 @@ The user stories should be created as GitHub issues. Therefore, this section wil
 A user story is a description of desired functionality told from the perspective of the user or customer. A starting template for the description of a user story is 
 
 *As a < user role >, I want < goal > so that < reason >.*
+
+As a authenticated user, I want to choose one area from many displayed in the app.
+
+As a authenticated user, I want to take a online ticket.
+
+As a authenticated user, I want to cancel the appointment that I booked.
 
 User stories should be created and described as [Issues](https://github.com/LEIC-ES-2021-22/templates/issues) in GitHub with the label "user story". See how to in the video [Creating a Product Backlog of User Stories for Agile Development using GitHub](https://www.youtube.com/watch?v=m8ZxTHSKSKE).
 
