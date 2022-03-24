@@ -28,10 +28,10 @@ Briefly describe each use case mentioning the following:
 | *Name* | Take online ticket |
 | *Actor* | User | 
 | *Description* |The user takes one online ticket to Academic Services, (**having the option to choose the area**). |
-| *Preconditions* | - The user has the "Uni" app. <br>  - The Academic Services are working <br> -The User has not tacken a ticket in the last half-hour or didn't failed to show up in his turn in the last 24 hours. <br> (**colocar mais/corrigir se necessário**) |
-| *Postconditions* | - User was given a ticket. <br> - The User is guaranteed their turn <br> -The number in the next ticket is updated (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* | 1. The User enters the Uni app and opens the tickets tab. <br> 2. The User can choose between the different areas to take a ticket. <br> 3. The User takes one ticket <br> 4.The User receives the number. <br> 5.The user is notified when the current ticket number is 5 numbers before his. <br> 6.The user enters Academic Services in his turn. (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* | 1. [Ticket Cancelation (?)] After receiving the ticket, the User is free to cancel it with a maximum of 3 cancelations/day <br> 2.[Missing turn] In case of the User failes to show up is given an time sanction of 24 hours <br> 3.[](**colocar mais/corrigr se necessário**)<br>|
+| *Preconditions* | - The user has the "Uni" app. <br>  - The Academic Services are working <br> - The User has not taken a ticket in the last half-hour or didn't fail to show up in his turn in the last 24 hours. <br> (**colocar mais/corrigir se necessário**) |
+| *Postconditions* | - User was given a ticket. <br> - The User is guaranteed their turn <br> - The number in the next ticket is updated (**colocar mais/corrigr se necessário**) | 
+| *Normal flow* | 1. The User enters the Uni app and opens the tickets tab. <br> 2. The User can choose between the different areas to take a ticket. <br> 3. The User takes one ticket <br> 4.The User receives a number. <br> 5.The user is notified when the current ticket number is 5 numbers before his. <br> 6. The user enters Academic Services in his turn. (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* | 1. [Ticket Cancelation (?)] After receiving the ticket, the User is free to cancel it with a maximum of 3 cancelations/day <br> 2. [Missing turn] In case the User fails to show up, he's given a time sanction of 24 hours <br> 3.[] (**colocar mais/corrigr se necessário**)<br>|
 
 |||
 | --- | --- |
