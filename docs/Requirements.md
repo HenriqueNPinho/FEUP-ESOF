@@ -26,17 +26,17 @@ Briefly describe each use case mentioning the following:
 |||
 | --- | --- |
 | *Name* | Take online ticket |
-| *Actor* | User | 
-| *Description* |The user takes one online ticket to Academic Services, (**having the option to choose the area**). |
-| *Preconditions* | - The user has the "Uni" app. <br>  - The Academic Services are working <br> -The User has not tacken a ticket in the last half-hour or didn't failed to show up in his turn in the last 24 hours. <br> (**colocar mais/corrigir se necessário**) |
-| *Postconditions* | - User was given a ticket. <br> - The User is guaranteed their turn <br> -The number in the next ticket is updated (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* | 1. The User enters the Uni app and opens the tickets tab. <br> 2. The User can choose between the different areas to take a ticket. <br> 3. The User takes one ticket <br> 4.The User receives the number. <br> 5.The user is notified when the current ticket number is 5 numbers before his. <br> 6.The user enters Academic Services in his turn. (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* | 1. [Ticket Cancelation (?)] After receiving the ticket, the User is free to cancel it with a maximum of 3 cancelations/day <br> 2.[Missing turn] In case of the User failes to show up is given an time sanction of 24 hours <br> 3.[](**colocar mais/corrigr se necessário**)<br>|
+| *Actor* | Student | 
+| *Description* |The Student takes one online ticket to Academic Services, (**having the option to choose the area**). |
+| *Preconditions* | - The Student has the "Uni" app. <br>  - The Academic Services are working <br> -The Student has not tacken a ticket in the last half-hour or didn't failed to show up in his turn in the last 24 hours. <br> (**colocar mais/corrigir se necessário**) |
+| *Postconditions* | - Student was given a ticket. <br> - The Student is guaranteed their turn <br> -The number in the next ticket is updated (**colocar mais/corrigr se necessário**) | 
+| *Normal flow* | 1. The Student enters the Uni app and opens the tickets tab. <br> 2. The Student can choose between the different areas to take a ticket. <br> 3. The Student takes one ticket <br> 4.The Student receives the number. <br> 5. The Student is notified when the current ticket number is 5 numbers before his. <br> 6. The Student enters Academic Services in his turn. (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* | 1. [Ticket Cancelation (?)] After receiving the ticket, the Student is free to cancel it with a maximum of 3 cancelations/day <br> 2.[Missing turn] In case of the Student failes to show up is given an time sanction of 24 hours <br> 3.[](**colocar mais/corrigr se necessário**)<br>|
 
 |||
 | --- | --- |
 | *Name* | Choose Area (**poderá não ser necessário, deixar para o fim**)|
-| *Actor* | User | 
+| *Actor* | Student | 
 | *Description* | |
 | *Preconditions* |(**colocar mais/corrigir se necessário**) |
 | *Postconditions* |  (**colocar mais/corrigr se necessário**) | 
@@ -45,12 +45,12 @@ Briefly describe each use case mentioning the following:
 
 |||
 | --- | --- |
-| *Name* |Cancel the ticket|
-| *Actor* | User | 
-| *Description* | |
-| *Preconditions* |(**colocar mais/corrigir se necessário**) |
-| *Postconditions* |  (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* |  (**colocar mais/corrigr se necessário**)|
+| *Name* |Cancel ticket|
+| *Actor* | Student | 
+| *Description* | The Student cancels the ticket.|
+| *Preconditions* |- The Student has the "Uni" app. <br> - The Student has a valid online ticket <br> (**colocar mais/corrigir se necessário**) |
+| *Postconditions* | - If the number of taken tickets that day was less than 3, the Student gets half-hour ban until he's able to take another one, otherwise gets an 24 hours sanction. <br> - The Student loses his turn.<br> (**colocar mais/corrigr se necessário**) | 
+| *Normal flow* | 1. The Student enters the Uni app and opens the tickets tab. <br> 2. The Student cancels the ticket <br>  (**colocar mais/corrigr se necessário**)|
 | *Alternative flows and exceptions* ||
 
 |||
