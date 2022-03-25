@@ -7,7 +7,6 @@
 </p>
 
 
-
 |||
 | --- | --- |
 | *Name* | Take online ticket |
@@ -16,27 +15,27 @@
 | *Preconditions* | - The Authenticated Student has the "Uni" app. <br> The Authenticated Student is logged in to the "Uni" app. <br> - The Academic Services are working <br> -The Authenticated Student has not tacken a ticket in the last half-hour or didn't failed to show up in his turn in the last 24 hours. <br> (**colocar mais/corrigir se necessário**) |
 | *Postconditions* | - Authenticated Student was given a ticket. <br> - The Authenticated Student is guaranteed their turn <br> -The number in the next ticket is updated (**colocar mais/corrigr se necessário**) | 
 | *Normal flow* | 1. The Authenticated Student enters the Uni app and opens the tickets tab. <br> 2. The Authenticated Student can choose between the different areas to take a ticket. <br> 3. The Authenticated Student takes one ticket <br> 4.The Authenticated Student receives the number. <br> 5. The Authenticated Student is notified when the current ticket number is 5 numbers before his. <br> 6. The Authenticated Student enters Academic Services in his turn. (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* | 1. [Ticket Cancelation (?)] After receiving the ticket, the Authenticated Student is free to cancel it with a maximum of 3 cancelations/day <br> 2.[Missing turn] In case of the Authenticated Student failes to show up is given an time sanction of 24 hours <br> 3.[](**colocar mais/corrigr se necessário**)<br>|
+| *Alternative flows and exceptions* | 1. [Ticket Cancelation] After receiving the ticket, the Authenticated Student is free to cancel it with a maximum of 3 cancelations/day <br> 2.[Missing turn] In case of the Authenticated Student failes to show up is given an time sanction of 12 hours. (**colocar mais/corrigr se necessário**)<br>|
 
 |||
 | --- | --- |
 | *Name* | Choose Area (**poderá não ser necessário, deixar para o fim**|
 | *Actor* | Authenticated Student | 
 | *Description* | The Student can choose between the diferent areas|
-| *Preconditions* |- The Authenticated Student has the "Uni" app. <br> The Authenticated Student is logged in to the "Uni" app. <br> - The Academic Services are working <br> -The Authenticated Student has not tacken a ticket in the last half-hour or didn't failed to show up in his turn in the last 24 hours. <br> (**colocar mais/corrigir se necessário**)|
+| *Preconditions* |- The Authenticated Student has the "Uni" app. <br> The Authenticated Student is logged in to the "Uni" app. <br> - The Academic Services are working <br> -The Authenticated Student has not tacken a ticket in the last half-hour or didn't failed to show up in his turn . <br> (**colocar mais/corrigir se necessário**)|
 | *Postconditions* |  (**colocar mais/corrigr se necessário**) | 
 | *Normal flow* | 1. The Authenticated Student enters the Uni app and opens the tickets tab. <br> 2. The Authenticated Student can choose between the different areas to take a ticket. (**colocar mais/corrigr se necessário**)|
 | *Alternative flows and exceptions* ||
 
 |||
 | --- | --- |
-| *Name* |Cancel the ticket|
+| *Name* | Cancel the ticket |
 | *Actor* |Authenticated Student | 
 | *Description* | The Student can cancel his appointment any time before |
 | *Preconditions* | -The Student must have taken a ticket online in the Uni app. (**colocar mais/corrigir se necessário**) |
 | *Postconditions* |  -The Student can´t reach a maximum of 3 cancelations.(**colocar mais/corrigr se necessário**) | 
 | *Normal flow* | 1. The Student takes his ticket in the Uni app. <br> 2. The Student can cancel his appointment.  (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* | 1. If the Student cancels up to 3 tickets in the same day he will no longer will be able to take another ticket in the same day. |
+| *Alternative flows and exceptions* | 1.[Not canceling in time] The student knows that he won´t/can´t go and doesn´t cancel his ticket in time, if the number of his turn shows up it is counted as not showing up and the 12 hours saction will be applied. |
 
 |||
 | --- | --- |
@@ -46,16 +45,7 @@
 | *Preconditions* | -There are no flaws in the Academic Services system (**colocar mais/corrigir se necessário**) |
 | *Postconditions* | -The individual waits up to his turn. (**colocar mais/corrigr se necessário**) | 
 | *Normal flow* |  1. The individual that takes the ticket gets a number related to his turn and he waits until his turn to show up. (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* | 1. If the individual misses his turn by a maximum of 3 turns the secretarians can still attend his request. |
-
-|||
-| --- | --- |
-| *Actor* | Authenticated Student | 
-| *Description* | The Student can choose the type of service.|
-| *Preconditions* | -The Student must login into his Uni account so that he can see and choose an option between the other alternatives. (**colocar mais/corrigir se necessário**) |
-| *Postconditions* |  -After he chooses his choice he can procede to take the online ticket. (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* |  1. The Student logs into the Uni app and opens the tickets tab. <br> 2. The Student chooses between the different areas to take a ticket. <br>(**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* | In this case model there is nothing that can go wrong **KKKKKKKK(:KKKKK**|
+| *Alternative flows and exceptions* | [Missing turn] After 2 minutes waiting the secretary skips the person turn. |
 
 
 ## User stories
