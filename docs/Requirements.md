@@ -11,32 +11,32 @@
 |||
 | --- | --- |
 | *Name* | Take online ticket |
-| *Actor* | Student | 
-| *Description* |The Student takes one online ticket to Academic Services, (**having the option to choose the area**). |
-| *Preconditions* | - The Student has the "Uni" app. <br> The student is logged in to the "Uni" app. <br> - The Academic Services are working <br> -The Student has not tacken a ticket in the last half-hour or didn't failed to show up in his turn in the last 24 hours. <br> (**colocar mais/corrigir se necessário**) |
-| *Postconditions* | - Student was given a ticket. <br> - The Student is guaranteed their turn <br> -The number in the next ticket is updated (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* | 1. The Student enters the Uni app and opens the tickets tab. <br> 2. The Student can choose between the different areas to take a ticket. <br> 3. The Student takes one ticket <br> 4.The Student receives the number. <br> 5. The Student is notified when the current ticket number is 5 numbers before his. <br> 6. The Student enters Academic Services in his turn. (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* | 1. [Ticket Cancelation (?)] After receiving the ticket, the Student is free to cancel it with a maximum of 3 cancelations/day <br> 2.[Missing turn] In case of the Student failes to show up is given an time sanction of 24 hours <br> 3.[](**colocar mais/corrigr se necessário**)<br>|
+| *Actor* | Authenticated Student | 
+| *Description* |The Authenticated Student takes one online ticket to Academic Services, (**having the option to choose the area**). |
+| *Preconditions* | - The Authenticated Student has the "Uni" app. <br> The Authenticated Student is logged in to the "Uni" app. <br> - The Academic Services are working <br> -The Authenticated Student has not tacken a ticket in the last half-hour or didn't failed to show up in his turn in the last 24 hours. <br> (**colocar mais/corrigir se necessário**) |
+| *Postconditions* | - Authenticated Student was given a ticket. <br> - The Authenticated Student is guaranteed their turn <br> -The number in the next ticket is updated (**colocar mais/corrigr se necessário**) | 
+| *Normal flow* | 1. The Authenticated Student enters the Uni app and opens the tickets tab. <br> 2. The Authenticated Student can choose between the different areas to take a ticket. <br> 3. The Authenticated Student takes one ticket <br> 4.The Authenticated Student receives the number. <br> 5. The Authenticated Student is notified when the current ticket number is 5 numbers before his. <br> 6. The Authenticated Student enters Academic Services in his turn. (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* | 1. [Ticket Cancelation (?)] After receiving the ticket, the Authenticated Student is free to cancel it with a maximum of 3 cancelations/day <br> 2.[Missing turn] In case of the Authenticated Student failes to show up is given an time sanction of 24 hours <br> 3.[](**colocar mais/corrigr se necessário**)<br>|
 
 |||
 | --- | --- |
 | *Name* | Choose Area (**poderá não ser necessário, deixar para o fim**|
-| *Actor* | Student | 
-| *Description* | |
-| *Preconditions* |(**colocar mais/corrigir se necessário**) |
+| *Actor* | Authenticated Student | 
+| *Description* | The Student can choose between the diferent areas|
+| *Preconditions* |- The Authenticated Student has the "Uni" app. <br> The Authenticated Student is logged in to the "Uni" app. <br> - The Academic Services are working <br> -The Authenticated Student has not tacken a ticket in the last half-hour or didn't failed to show up in his turn in the last 24 hours. <br> (**colocar mais/corrigir se necessário**)|
 | *Postconditions* |  (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* |  (**colocar mais/corrigr se necessário**)|
+| *Normal flow* | 1. The Authenticated Student enters the Uni app and opens the tickets tab. <br> 2. The Authenticated Student can choose between the different areas to take a ticket. (**colocar mais/corrigr se necessário**)|
 | *Alternative flows and exceptions* ||
 
 |||
 | --- | --- |
 | *Name* |Cancel the ticket|
-| *Actor* | User | 
-| *Description* | The user can cancel his appointment any time before (up to 10 minutes before(**Ver isto**) his turn. |
-| *Preconditions* | -The user must have taken a ticket online in the Uni app. (**colocar mais/corrigir se necessário**) |
-| *Postconditions* |  -The user can´t reach a maximum of 3 cancelations.(**colocar mais/corrigr se necessário**) | 
-| *Normal flow* | 1. The user takes his ticket in the Uni app. <br> 2. The user can cancel his appointment.  (**colocar mais/corrigr se necessário**)|
-| *Alternative flows and exceptions* | 1. If the user cancels up to 3 tickets in the same day he will no longer will be able to take another ticket in the same day. |
+| *Actor* |Authenticated Student | 
+| *Description* | The Student can cancel his appointment any time before |
+| *Preconditions* | -The Student must have taken a ticket online in the Uni app. (**colocar mais/corrigir se necessário**) |
+| *Postconditions* |  -The Student can´t reach a maximum of 3 cancelations.(**colocar mais/corrigr se necessário**) | 
+| *Normal flow* | 1. The Student takes his ticket in the Uni app. <br> 2. The Student can cancel his appointment.  (**colocar mais/corrigr se necessário**)|
+| *Alternative flows and exceptions* | 1. If the Student cancels up to 3 tickets in the same day he will no longer will be able to take another ticket in the same day. |
 
 |||
 | --- | --- |
@@ -50,11 +50,11 @@
 
 |||
 | --- | --- |
-| *Actor* | User | 
-| *Description* | The User can choose the type of service.|
-| *Preconditions* | -The User must login into his Uni account so that he can see and choose an option between the other alternatives. (**colocar mais/corrigir se necessário**) |
+| *Actor* | Authenticated Student | 
+| *Description* | The Student can choose the type of service.|
+| *Preconditions* | -The Student must login into his Uni account so that he can see and choose an option between the other alternatives. (**colocar mais/corrigir se necessário**) |
 | *Postconditions* |  -After he chooses his choice he can procede to take the online ticket. (**colocar mais/corrigr se necessário**) | 
-| *Normal flow* |  1. The User logs into the Uni app and opens the tickets tab. <br> 2. The User chooses between the different areas to take a ticket. <br>(**colocar mais/corrigr se necessário**)|
+| *Normal flow* |  1. The Student logs into the Uni app and opens the tickets tab. <br> 2. The Student chooses between the different areas to take a ticket. <br>(**colocar mais/corrigr se necessário**)|
 | *Alternative flows and exceptions* | In this case model there is nothing that can go wrong **KKKKKKKK(:KKKKK**|
 
 
