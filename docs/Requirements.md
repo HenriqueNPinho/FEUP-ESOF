@@ -2,25 +2,10 @@
 
 ## Use case model 
 
-Create a use-case diagram in UML with all high-level use cases possibly addressed by your module, to clarify the context and boundaries of your application.
-
-Give each use case a concise, results-oriented name. Use cases should reflect the tasks the user needs to be able to accomplish using the system. Include an action verb and a noun. 
-
-Example:
  <p align="center" justify="center">
   <img src=""/>
 </p>
 
-
-Briefly describe each use case mentioning the following:
-
-* **Actor**. Name only the actor that will be initiating this use case, i.e. a person or other entity external to the software system being specified who interacts with the system and performs use cases to accomplish tasks. 
-* **Description**. Provide a brief description of the reason for and outcome of this use case, or a high-level description of the sequence of actions and the outcome of executing the use case. 
-* **Preconditions and Postconditions**. Include any activities that must take place, or any conditions that must be true, before the use case can be started (preconditions). Describe also the state of the system at the conclusion of the use case execution (postconditions). 
-
-* **Normal Flow**. Provide a detailed description of the user actions and system responses that will take place during execution of the use case under normal, expected conditions. This dialog sequence will ultimately lead to accomplishing the goal stated in the use case name and description. This is best done as a numbered list of actions performed by the actor, alternating with responses provided by the system. 
-* **Alternative Flows and Exceptions**. Document other, legitimate usage scenarios that can take place within this use case, stating any differences in the sequence of steps that take place. In addition, describe any anticipated error conditions that could occur during execution of the use case, and define how the system is to respond to those conditions. 
-  
 
 
 |||
@@ -35,7 +20,7 @@ Briefly describe each use case mentioning the following:
 
 |||
 | --- | --- |
-| *Name* | Choose Area (**poderá não ser necessário, deixar para o fim**)|
+| *Name* | Choose Area (**poderá não ser necessário, deixar para o fim**|
 | *Actor* | Student | 
 | *Description* | |
 | *Preconditions* |(**colocar mais/corrigir se necessário**) |
@@ -66,7 +51,7 @@ Briefly describe each use case mentioning the following:
 |||
 | --- | --- |
 | *Actor* | User | 
-| *Description* | The User can choose the type of service he wants implicit in his ticket |
+| *Description* | The User can choose the type of service.|
 | *Preconditions* | -The User must login into his Uni account so that he can see and choose an option between the other alternatives. (**colocar mais/corrigir se necessário**) |
 | *Postconditions* |  -After he chooses his choice he can procede to take the online ticket. (**colocar mais/corrigr se necessário**) | 
 | *Normal flow* |  1. The User logs into the Uni app and opens the tickets tab. <br> 2. The User chooses between the different areas to take a ticket. <br>(**colocar mais/corrigr se necessário**)|
