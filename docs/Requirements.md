@@ -49,19 +49,34 @@
 
 
 ## User stories
-The user stories should be created as GitHub issues. Therefore, this section will *not* exist in your report, it is here only to explain how you should describe the requirements of the product as **user stories**. 
 
-A user story is a description of desired functionality told from the perspective of the user or customer. A starting template for the description of a user story is 
+**<h3>Must have</h3>**(Requirements labelled as Must have are critical to the current delivery timebox in order for it to be a success.) 
 
-*As a < user role >, I want < goal > so that < reason >.*
+As a Authenticated Student, I want to choose one area from many displayed in the app so that I can be served according to my request.
 
-As a authenticated user, I want to choose one area from many displayed in the app so that I am attended at the academic services in the right place.
+As a Authenticated Student, I want to successfully take a online ticket so that I don´t need to go physically to the place. 
 
-As a authenticated user, I want to take a online ticket so that I don't need to use a physical ticket or move around for that purpose.
+As a Authenticated Student, I want to cancel the appointment that I booked so that the queue no longer needs to wait for someone that can´t come to the appointment.
 
-As a authenticated user, I want to cancel the appointment that I booked so that I don't use tickets unnecessarily . 
+<br>
 
-As a authenticated user, I want to validate my presence that I booked (**talvez isto tenha de ser mudado!**).
+**<h3>Should have</h3>**(Requirements labelled as Should have are important but not necessary for delivery in the current delivery timebox.)
+
+As a Student, I want to login so that I can use the app.
+
+As a Authenticated Student, I want to logout so that I can leave the app in a safe way.
+
+As a Authenticated Student, I want to recive a notification so that it can warn me before my turn in order to get to the place in time.
+
+As a Authenticated Student, I want to get a visual feedback of the service speed so that I can decide if I can wait for my turn.
+
+<hr>
+
+**<h3>Could have </h3>**  (Requirements labelled as Could have are desirable but not necessary and could improve the user experience or customer satisfaction for a little development cost.)
+
+As a Authenticated Student I want to have some help/guidance through the application so that I can easily take a ticket.
+
+<hr>
 
 User stories should be created and described as [Issues](https://github.com/LEIC-ES-2021-22/templates/issues) in GitHub with the label "user story". See how to in the video [Creating a Product Backlog of User Stories for Agile Development using GitHub](https://www.youtube.com/watch?v=m8ZxTHSKSKE).
 
