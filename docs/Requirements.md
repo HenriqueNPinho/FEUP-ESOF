@@ -11,8 +11,8 @@
 | --- | --- |
 | *Name* | Take online ticket |
 | *Actor* | Authenticated Student | 
-| *Description* |The Authenticated Student takes one online ticket to Academic Services |
-| *Preconditions* | - The Authenticated Student has the "Uni" app <br> - The Authenticated Student is logged in to the "Uni" app <br> - The Academic Services are working <br> - The Authenticated Student has not taken a ticket in the last half-hour or didn't fail to show up on his turn in the last 24 hours <br>  |
+| *Description* |The Authenticated Student takes one online ticket to the Academic Services |
+| *Preconditions* | - The Authenticated Student has the "Uni" app <br> - The Authenticated Student is logged in to the "Uni" app <br> - The Academic Services are working <br> - The Authenticated Student has not taken a ticket in the last half-hour or hasn't failed to show up on his turn in the last 24 hours <br>  |
 | *Postconditions* | - Authenticated Student was given a ticket <br> - The Authenticated Student is guaranteed their turn <br> - The number in the next ticket is updated  | 
 | *Normal flow* | 1. The Authenticated Student enters the Uni app and opens the tickets tab <br> 2. The Authenticated Student can choose between the different areas to take a ticket <br> 3. The Authenticated Student takes one ticket <br> 4. The Authenticated Student receives the number <br> 5. The Authenticated Student is notified when the current ticket number is 5 numbers before his <br> 6. The Authenticated Student enters Academic Services in his turn |
 | *Alternative flows and exceptions* | 1. [Ticket Cancelation] After receiving the ticket, the Authenticated Student is free to cancel it with a maximum of 3 cancelations/day <br> 2. [Missing turn] In case of the Authenticated Student failes to show up is given an time sanction of 12 hours <br>|
@@ -222,7 +222,7 @@
   * Then he can check the service rate in the Academic Services
 
   * And decide if he wants to take a ticket or not
-  * 
+
   ### Scenario: The authenticated with a ticket can check the service rate 
 
   * Given an authenticated student waiting to be served by the Academic Services
