@@ -87,7 +87,7 @@
 
   * And he already chose the area
 
-  * Then he can acknowledge the ticket confimation
+  * Then he can acknowledge the ticket confirmation
 
   * And he can take the ticket
 
