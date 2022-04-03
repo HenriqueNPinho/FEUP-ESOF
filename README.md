@@ -11,7 +11,7 @@ You can find here detailed about the product (or mini-app or module), from a hig
   * [Elevator Pitch]
 * [Requirements](docs/Requirements.md)
   * [Use Case Model](docs/Requirements.md#Use-case-model)
-  * [User stories](docs/Requirements.md#User-stories)
+  * [User stories](https://github.com/LEIC-ES-2021-22/2LEIC11T5/issues)
   * [Domain model](docs/Requirements.md#Domain-model)
 * [Architecture and Design]
   * [Logical architecture]
