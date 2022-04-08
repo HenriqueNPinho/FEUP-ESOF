@@ -17,6 +17,24 @@ It can be beneficial to present the system both in a horizontal or vertical deco
 horizontal decomposition may define layers and implementation concepts, such as the user interface, business logic and concepts;
 vertical decomposition can define a hierarchy of subsystems that cover all layers of implementation.
 
+## Rascunho 
+For our project, we decided that the MVC (Model-View-Controller) architecture pattern is the one that best suits our objective. 
+
+Since there is a clear separation of what is observed: 
+    View - functionalities that the user can use on the mobile phone screen), 
+    
+Where the necessary data for the functionalities are: 
+    Model - password system of a secretary) 
+    
+The need to coordinate , manipulate, update user interactions with features:
+    Controller - change the number of current passwords, cancellation etc .
+
+Below we have a clear but abstract representation of how the MVC pattern works:
+
+
+
+
+
 ## Physical architecture
 
 The goal of this subsection is to document the high-level physical structure of the software system (machines, connections, software components installed, and their dependencies) using UML deployment diagrams (Deployment View) or component diagrams (Implementation View), separate or integrated, showing the physical structure of the system.
