@@ -34,7 +34,7 @@ Where the necessary data for the functionalities are:
     
 The need to coordinate , manipulate, and handles input from users interactions :
     
-    Controller : The controller's main function is to mediate the interaction between the model and the view. It takes user or view inputs into account and creates the correct outputs by interacting with the Model that responds as intended.
+    Controller : The controller's main function is to mediate the interaction between the Model and the View. It takes user or View inputs into account and creates the correct outputs by interacting with the Model that responds as intended.
     
     Example: update the number of tickets taken, cancellation by a user 
 
