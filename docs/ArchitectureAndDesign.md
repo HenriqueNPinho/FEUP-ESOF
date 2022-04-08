@@ -18,7 +18,7 @@ horizontal decomposition may define layers and implementation concepts, such as 
 vertical decomposition can define a hierarchy of subsystems that cover all layers of implementation.
 
 ## Rascunho 
-For our project, we decided that the MVC (Model-View-Controller) architecture pattern is the one that best suits our objective. 
+For our project, we decided that the MVC (Model-View-Controller) architecture pattern is the one that best suits our app . 
 
 Since there is a clear separation of what is observed: 
     View - functionalities that the user can use on the mobile phone screen 
@@ -27,11 +27,13 @@ Where the necessary data for the functionalities are:
     Model - password system of a secretary) 
     
 The need to coordinate , manipulate, update user interactions taking into account the user's interaction with the View and the Model:
-    Controller - update the number of passwords taken, cancellation etc .
+    Controller - update the number of tickets taken, cancellation .
 
-Below we have a clear and abstract representation of how the MVC pattern works:
+Below we have a clear and abstract representation of how the MVC pattern works in our app:
 
-
+<p align="center" justify="center">
+  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/MVC_UniTicket.png"/>
+</p>
 
 
 
