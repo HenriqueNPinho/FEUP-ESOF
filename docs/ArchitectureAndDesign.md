@@ -21,15 +21,15 @@ vertical decomposition can define a hierarchy of subsystems that cover all layer
 For our project, we decided that the MVC (Model-View-Controller) architecture pattern is the one that best suits our objective. 
 
 Since there is a clear separation of what is observed: 
-    View - functionalities that the user can use on the mobile phone screen), 
+    View - functionalities that the user can use on the mobile phone screen 
     
 Where the necessary data for the functionalities are: 
     Model - password system of a secretary) 
     
-The need to coordinate , manipulate, update user interactions with features:
-    Controller - change the number of current passwords, cancellation etc .
+The need to coordinate , manipulate, update user interactions taking into account the user's interaction with the View and the Model:
+    Controller - update the number of passwords taken, cancellation etc .
 
-Below we have a clear but abstract representation of how the MVC pattern works:
+Below we have a clear and abstract representation of how the MVC pattern works:
 
 
 
