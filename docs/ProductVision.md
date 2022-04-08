@@ -2,7 +2,8 @@
 
 ## Vision Statement
 
-UniTicket is an app that provides students the best and easiest way to schedule their turn at the Academic Services of FEUP, avoiding the unnecessary waiting time, unlike nowadays, where you need to go to Academic services to obtain a paper ticket and wait in queues for your turn.
+UniTicket is an app that provides students the best and easiest way to schedule their turn at the Academic Services of FEUP, avoiding the unnecessary waiting time, unlike nowadays, where you need to go to Academic services to obtain a paper ticket and wait in queues for your turn. 
+UniTicket gives you the opportunity to get a ticket online and track in real time the state of the queues.
 
 ## Main Features
 
