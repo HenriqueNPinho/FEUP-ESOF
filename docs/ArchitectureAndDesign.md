@@ -1,11 +1,12 @@
 
 ## **Logical View**
 
+
+For our project, we decided that the MVC (Model-View-Controller) architecture pattern is the one that best suits our app . 
+
 <p align="center" justify="center">
   <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/MVC_UniTicket.png"/>
 </p>
-
-For our project, we decided that the MVC (Model-View-Controller) architecture pattern is the one that best suits our app . 
 
 Since there is a clear separation of what is observed: 
     
@@ -25,9 +26,11 @@ The need to coordinate , manipulate, and handles input from users interactions :
     
     Example: update the number of tickets taken, cancellation by a user 
     
+
 <p align="center" justify="center">
   <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/Logical Architecture.png"/>
 </p>
+
 
 ### Electronic Ticket System 
 
