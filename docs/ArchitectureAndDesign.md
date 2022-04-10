@@ -20,6 +20,10 @@ The need to coordinate , manipulate, and handles input from users interactions :
     Controller : The controller's main function is to mediate the interaction between the Model and the View. It takes user or View inputs into account and creates the correct outputs by interacting with the Model that responds as intended.
     
     Example: update the number of tickets taken, cancellation by a user 
+    
+<p align="center" justify="center">
+  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/Logical Architecture.png"/>
+</p>
 
 ### Electronic Ticket System 
 
@@ -53,6 +57,10 @@ The need to coordinate , manipulate, and handles input from users interactions :
 
 ## **Physical Architecture**
 
+ <p align="center" justify="center">
+  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/Physical_architeture.png"/>
+</p>
+
 **User Client Machine**
  * Authenticated students smartphones that allows to interact with the app interface.
 
@@ -67,7 +75,3 @@ The need to coordinate , manipulate, and handles input from users interactions :
 
 **Ticketing Server Machine**
 * Computer that runs the software capable of synchronously managing all the devices related to the tickets (previously mentioned).
-
-<p align="center" justify="center">
-  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/MVC_UniTicket.png"/>
-</p>
