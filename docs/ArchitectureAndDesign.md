@@ -26,17 +26,15 @@ The need to coordinate , manipulate, and handles input from users interactions :
     
     Example: update the number of tickets taken, cancellation by a user 
     
-
-<p align="center" justify="center">
-  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/Logical Architecture.png"/>
-</p>
-
-
 ### Electronic Ticket System 
 
  * This package will encompass the entire implementation of the Business Logic which will provide the custom rules or algorithms that handle the exchange of information between a database and user interface. 
 
  * These interfaces will be, for example, the applications on students' smartphones, the television with the dashboard that displays the status of the service and also the ticket dispenser machine in the academic services. It will allow staff to manage the ticket line too.
+
+<p align="center" justify="center">
+  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/Logical Architecture.png"/>
+</p>
 
 **Ticketing Application UI**
 
