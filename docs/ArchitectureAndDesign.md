@@ -1,6 +1,10 @@
 
 ## **Logical View**
 
+<p align="center" justify="center">
+  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/MVC_UniTicket.png.png"/>
+</p>
+
 For our project, we decided that the MVC (Model-View-Controller) architecture pattern is the one that best suits our app . 
 
 Since there is a clear separation of what is observed: 
