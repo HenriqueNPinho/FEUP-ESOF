@@ -80,3 +80,19 @@ The need to coordinate , manipulate, and handles input from users interactions :
 
 **Ticketing Server Machine**
 * Computer that runs the software capable of synchronously managing all the devices related to the tickets (previously mentioned).
+
+
+
+## **Vertical Prototype**
+
+To help on validating all the architectural, design and technological decisions made, we usually implement a vertical prototype, a thin vertical slice of the system.
+
+We used flutter to develop the prototype.
+In this way, we also got a better idea if this tool works for our application and if it makes sense to continue development with it.
+
+The prototype implements a simplified version of what could turn out to be a page with the main rules for using the app. Rules that can be found in our Case Model.
+
+
+<p align="center" justify="center">
+  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/vertical_prt"/>
+</p>
