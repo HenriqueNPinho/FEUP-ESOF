@@ -67,10 +67,7 @@ In this subsection please describe which feature you have implemented, and how, 
 
 At this phase, instead of a complete user story, you can simply implement a feature that demonstrates thay you can use the technology, for example, show a screen with the app credits (name and authors).
 
-
-# /////////////////////////////////////////////////////////////////
-
-## | Logical View
+## Logical View
 
 ### Electronic Ticket System 
 
@@ -79,44 +76,44 @@ At this phase, instead of a complete user story, you can simply implement a feat
  * These interfaces will be, for example, the applications on students' smartphones, the television with the dashboard that displays the status of the service and also the ticket dispenser machine in the academic services. It will allow staff to manage the ticket line too.
 
 
-### Ticketing Application UI  
+**Ticketing Application UI**
 
 * This package allows every authenticated user to interact with the application in order to take tickets, view the service rate, etc.
 
-### Ticket Dispenser Machine GUI
+**Ticket Dispenser Machine GUI**
 
 * This graphics user interface allows people choose their ticket at the Academic Services.
 
-### Ticket Managing UI
+**Ticket Managing UI**
 
 * Concedes access to staff so that they can manage and control the status of the queue.
 
-### Ticketing Service Screen GUI
+**Ticketing Service Screen GUI**
 
 * This GUI is displayed on the Academic Services TV screen and allows to show queue information.
 
-### Ticketing Business Logic
+**Ticketing Business Logic**
 
 * The logic pertaining to the ticket functions since the applications on students smartphones to the ticketing GUI in the Academic Services.
 
-### Ticketing Database Schema
+**Ticketing Database Schema**
 
 * This database will store data related to each day of attendance so that in the future we can study better resolutions of the problem.
 
 
-## | Physical Architecture
+## Physical Architecture
 
-### User Client Machine
+**User Client Machine**
  * Authenticated students smartphones that allows to interact with the app interface.
 
-### Academic Services TV Screen
+**Academic Services TV Screen**
  * Queue and service status presented on the Academic Services TV screen.
 
-### Ticketing Paper Method
+**Ticketing Paper Method**
 * Ticket dispenser machine near the Academic Services. 
 
-### Ticket Managment
+**Ticket Managment**
  * Interface in the staff computers that allows to skip the tickets.
 
-### Ticketing Server Machine
+**Ticketing Server Machine**
 * Computer that runs the software capable of synchronously managing all the devices related to the tickets (previously mentioned).
