@@ -94,5 +94,5 @@ The prototype implements a simplified version of what could turn out to be a pag
 
 
 <p align="center" justify="center">
-  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/vertical_prt"/>
+  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/vertical_prt.png"/>
 </p>
