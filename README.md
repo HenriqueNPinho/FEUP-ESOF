@@ -20,7 +20,7 @@ You can find here detailed about the product (or mini-app or module), from a hig
 * [Implementation]
 * [Test]
 * [Configuration and change management]
-* [Project management](docs/ArchitectureAndDesign.md#Project-management)
+* [Project management](docs/ProjectManagement.md#Project-management)
 
 ---
 ## Team Members
