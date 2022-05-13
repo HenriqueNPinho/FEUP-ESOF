@@ -1,21 +1,15 @@
-# Product Vision
+## Project management
+Software project management is the art and science of planning and leading software projects, in which software projects are planned, implemented, monitored and controlled.
 
-## Vision Statement
+In the context of ESOF, we recommend each team to adopt a set of project management practices and tools capable of registering tasks, assigning tasks to team members, adding estimations to tasks, monitor tasks progress, and therefore being able to track their projects.
 
-UniTicket is an app that provides students the best and easiest way to schedule their turn at the Academic Services of FEUP, avoiding the unnecessary waiting time, unlike nowadays, where you need to go to Academic services to obtain a paper ticket and wait in queues for your turn. 
-UniTicket gives you the opportunity to get a ticket online and track in real time the state of the queues.
+Common practices of managing iterative software development are: backlog management, release management, estimation, iteration planning, iteration development, acceptance tests, and retrospectives.
 
-## Main Features
+You can find below information and references related with the project management in our team: 
 
- - Feature 1 - withdraw/cancel ticket online
- - Feature 2 - Prior notification of the student's turn - To avoid delays, the application ,for example, send a notification when the queue is 5 positions from the student's one.
- - Feature 3 - Student's can have access to average wait time.
- - Feature 4 - Abuse control - One student can only take 1 ticket per hour and/or if he doesn't validate the ticket and/or doesn't show up get's 1 day ban
-
-
-##  Assumptions and dependencies
-
-- Current number in real time
-- Service type 
-- Connection between the feature and the physical ticket machine
+* Backlog management: Product backlog and Iteration backlog in a [Github Projects board](https://github.com/LEIC-ES-2021-22/templates/projects/1);
+* Release management: [v0](https://github.com/LEIC-ES-2021-22/templates/releases/tag/v0), v1, v2, v3, v...;
+* Iteration planning and retrospectives: 
+  * plans: screenshots of Github Projects board at begin and end of each iteration;
+  * retrospectives: meeting notes in a document in the repository
 
