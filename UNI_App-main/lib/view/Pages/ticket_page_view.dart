@@ -9,7 +9,7 @@ class TicketPageView extends StatefulWidget {
   State<StatefulWidget> createState() => TicketPageViewState();
 }
 
-/// Manages the 'about' section of the app.
+/// Manages the 'ticket' section of the app.
 class TicketPageViewState extends GeneralPageViewState {
   @override
   Widget getBody(BuildContext context) {
@@ -17,7 +17,7 @@ class TicketPageViewState extends GeneralPageViewState {
     return ListView(
       children: <Widget>[
         Container(
-            //color: Colors.blueGrey,
+          //color: Colors.blueGrey,
             margin: const EdgeInsets.all(15),
             alignment: Alignment.topCenter,
             child: Column(
@@ -41,11 +41,198 @@ class TicketPageViewState extends GeneralPageViewState {
                 makeBoxCard('C', '025', '25'),
             ],
             )
+        ),
 
+        Ink(
+          decoration: ShapeDecoration(
+            color: Theme.of(context).accentColor,
+            shape: CircleBorder(),
+          ),
+          child: IconButton(
+            icon: Icon(
+              //AssetImage('assets/icon/question.png')
+              Icons.question_mark_rounded,
+              color: Theme.of(context).primaryColor,
+            ),
+            onPressed: (){ print('botao ? clicado');
+            },
+          ),
+        ),
+
+        makeBoxInf(),
+
+        //button 
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 40),
+          child:  ElevatedButton(
+            child: Text('Pedir Senha', style: TextStyle(fontSize: 20)),
+             style: ElevatedButton.styleFrom(
+              //shadowColor: Colors.black,
+              elevation: 20,
+            ), 
+            /* style: ButtonStyle(
+                minimumSize: MaterialStateProperty.all(Size(220, 80)),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        ))),
+            */
+            onPressed: () => showCustomDialog(context)
+            ),
         )
       ]
     );
   }
+}
+
+void showCustomDialog(BuildContext context) {
+  showGeneralDialog(
+    context: context,
+    barrierLabel: "Barrier",
+    barrierDismissible: true,
+    barrierColor: Colors.black.withOpacity(0.5),
+    transitionDuration: Duration(milliseconds: 500),
+    pageBuilder: (_, __, ___) {
+      return Center(
+        child: Container(
+            height: 200,
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(20)),
+            child: Column(
+              children: [
+                Container(
+                  child: Center(
+                    child: DefaultTextStyle(
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black),
+                      child: Text('Confirmar senha?'),
+                    ),
+                  ),
+                  margin: EdgeInsets.fromLTRB(30, 50, 30, 50),
+                ),
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Container(
+                    margin: EdgeInsets.only(right: 30),
+                    child: ElevatedButton(
+                        child: Text('Sim', style: TextStyle(fontSize: 15)),
+                        style: ButtonStyle(
+                            minimumSize:
+                                MaterialStateProperty.all(Size(120, 40)),
+                            /*foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(Colors.red),
+                            shadowColor:
+                                MaterialStateProperty.all<Color>(Colors.black),*/
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    //side: BorderSide(color: Colors.red)
+                                    ))),
+                        onPressed: () => null),
+                  ),
+                  Container(
+                    child: ElevatedButton(
+                        child: Text('Não', style: TextStyle(fontSize: 15)),
+                        style: ButtonStyle(
+                            minimumSize:
+                                MaterialStateProperty.all(Size(120, 40)),
+                            /*foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
+                            backgroundColor:
+                                MaterialStateProperty.all<Color>(Colors.red),
+                            shadowColor:
+                                MaterialStateProperty.all<Color>(Colors.black),*/
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    //side: BorderSide(color: Colors.red)
+                                    ))
+                                    ),
+                        onPressed: () => null),
+                  ),
+                ]),
+              ],
+            )),
+      );
+    },
+    transitionBuilder: (_, anim, __, child) {
+      Tween<Offset> tween;
+      if (anim.status == AnimationStatus.reverse) {
+        tween = Tween(begin: Offset(-1, 0), end: Offset.zero);
+      } else {
+        tween = Tween(begin: Offset(1, 0), end: Offset.zero);
+      }
+
+      return SlideTransition(
+        position: tween.animate(anim),
+        child: FadeTransition(
+          opacity: anim,
+          child: child,
+        ),
+      );
+    },
+  );
+}
+
+Widget makeBoxInf(){
+  return Container(
+          //color: Colors.blueAccent,
+          margin: const EdgeInsets.all(15),
+          alignment: Alignment.topCenter,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                width: 320,
+                height: 1,
+                margin: EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.7),
+                        blurRadius: 7,
+                        offset: Offset(0,4),
+                        
+                      )
+                    ]
+                  ),
+              ),
+              Container(
+                child: Text('Horário de atendimento: 11h às 16h;\nEmissão de Senha: 10h30 às 15h30;'),
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                child: Text('Tolerância: 3 Senhas'),
+              ),
+              
+              Container(
+                width: 320,
+                height: 1,
+                
+                margin: EdgeInsets.only(left: 5, right: 5, top: 10, bottom: 10),
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.7),
+                        blurRadius: 7,
+                        offset: Offset(0,3),
+                        
+                      )
+                    ]
+                  ),
+              )
+            ],
+            )
+        );
 }
 
 Widget makeBoxCard(String letra, String numero, String quantidade){
