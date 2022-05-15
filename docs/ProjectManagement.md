@@ -9,7 +9,7 @@ You can find below information and references related with the project managemen
 
 ### Iteration 1 
   * plans: Projects board at [begin]() and [end]() 
-  * retrospectives: [Meeting notes]()
+  * retrospectives: [Meeting notes](docs/RetrospectiveMeeting)
 	
 
 ### Iteration 2
