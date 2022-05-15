@@ -12,6 +12,6 @@ You can find below information and references related with the project managemen
   * retrospectives: [Meeting notes](RetrospectiveMeeting.md)
 	
 
-### Iteration
+### Iteration 2
   * plans: Projects board at [begin](images/Iteration2_begin) and [end]() 
   * retrospectives: [Meeting notes]()
