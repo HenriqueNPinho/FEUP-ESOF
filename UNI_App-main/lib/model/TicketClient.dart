@@ -11,7 +11,7 @@ class Client{
 
   }
 
-  bool getBcocked(){
+  bool getBlocked(){
     return blocked;
   }
 
@@ -19,6 +19,6 @@ class Client{
     return blocked = true;
   }
 
-  
+
 
 }
