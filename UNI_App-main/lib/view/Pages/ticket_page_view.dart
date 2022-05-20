@@ -287,7 +287,7 @@ Widget makeBoxInf() {
           Container(
             child: Text(
 
-                'Horário de atendimento: 11h às 16h;\nEmissão de Senha: 10h30 às 15h30',
+                'Horário de atendimento: 11h às 16h .\nEmissão de Senha: 10h30 às 15h30 .',
                 key: const Key('work_information'),
           ),
 
