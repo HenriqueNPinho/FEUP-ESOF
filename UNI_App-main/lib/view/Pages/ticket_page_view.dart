@@ -8,9 +8,6 @@ import 'package:uni/view/Pages/cancel_ticket_page.dart';
 var ticketNumber = null;
 var areaChoosen = null;
 
-var ticketNumber = null;
-var areaChoosen = null;
-
 class TicketPageView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => TicketPageViewState();
@@ -219,14 +216,10 @@ void showCustomDialog(BuildContext context) {
                                 RoundedRectangleBorder>(RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ))),
-<<<<<<< HEAD
-                        onPressed: () => null),
-=======
                         onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => TicketCancelPageView()))),
->>>>>>> 832ea9dab79b33b9f9d6b9dc62b8be872d0a49ef
                   ),
                   Container(
                     child: ElevatedButton(
@@ -357,8 +350,4 @@ Widget makeBoxCard(String letra, String numero, String quantidade) {
               ),
             ],
           )));
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 832ea9dab79b33b9f9d6b9dc62b8be872d0a49ef
