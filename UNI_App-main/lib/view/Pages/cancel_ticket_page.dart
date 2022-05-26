@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
+import 'package:uni/view/Pages/ticket_page_view.dart';
 
 class TicketCancelPageView extends StatefulWidget {
   @override
@@ -12,16 +13,66 @@ class TicketCancelViewState extends GeneralPageViewState {
   Widget getBody(BuildContext context) {
     final MediaQueryData queryData = MediaQuery.of(context);
     return Scaffold(
-      body: ElevatedButton(
-          child: Text('Cancelar Senha', style: TextStyle(fontSize: 20)),
-          style: ButtonStyle(
-              minimumSize: MaterialStateProperty.all(Size(220, 80)),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ))),
-          onPressed: () => cancelPopUp(context)),
-    );
+        body: Center(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+          Container(
+            child: Center(
+              child: Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text(
+                        '${getArea()[1]}',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        '${getArea()[0]}',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 80),
+                      ),
+                      Text('${getTicket()}',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 40)),
+                    ]),
+              ),
+            ),
+            margin: EdgeInsets.symmetric(horizontal: 30),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.grey[100],
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.7),
+                    blurRadius: 7,
+                    offset: Offset(0, 3),
+                  )
+                ]),
+          ),
+          makeBoxInf(),
+          Container(
+              margin: EdgeInsets.symmetric(horizontal: 40),
+              child: ElevatedButton(
+                  key: const Key('CancelarButton'), //TEST
+                  child: Text(
+                    'Cancelar Senha',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  style: ButtonStyle(
+                      minimumSize: MaterialStateProperty.all(Size(220, 80)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ))),
+                  onPressed: () => cancelPopUp(context))),
+        ])));
   }
 }
 

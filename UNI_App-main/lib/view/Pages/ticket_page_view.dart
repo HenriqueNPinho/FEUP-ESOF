@@ -8,6 +8,18 @@ import 'package:uni/view/Pages/cancel_ticket_page.dart';
 var ticketNumber = null;
 var areaChoosen = null;
 
+String getTicket() {
+  return ticketNumber.toString();
+}
+
+List getArea() {
+  var name = null;
+  if (areaChoosen == 'A') name = 'Secretaria';
+  if (areaChoosen == 'B') name = 'Tesouraria';
+  if (areaChoosen == 'C') name = 'Outro Serviço';
+  return [areaChoosen, name];
+}
+
 class TicketPageView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => TicketPageViewState();
@@ -67,6 +79,7 @@ class TicketPageViewState extends GeneralPageViewState {
       Container(
         margin: EdgeInsets.symmetric(horizontal: 40),
         child: ElevatedButton(
+            key: const Key('PedirSenhaButton'),
             child: Text('Pedir Senha', style: TextStyle(fontSize: 20)),
             style: ElevatedButton.styleFrom(
               //shadowColor: Colors.black,
@@ -208,6 +221,7 @@ void showCustomDialog(BuildContext context) {
                   Container(
                     margin: EdgeInsets.only(right: 30),
                     child: ElevatedButton(
+                        key: const Key('ConfirmarSimButton'), //test
                         child: Text('Sim', style: TextStyle(fontSize: 15)),
                         style: ButtonStyle(
                             minimumSize:
@@ -303,51 +317,54 @@ Widget makeBoxInf() {
 }
 
 Widget makeBoxCard(String letra, String numero, String quantidade) {
-  return InkWell(
-      onTap: () => {
-            ticketNumber = int.parse(numero),
-            areaChoosen = letra,
-            //print('NUMERO: $ticketNumber\nAREA: $areaChoosen')
-          },
-      onLongPress: () => {
-            ticketNumber = null,
-            areaChoosen = null,
-            //print('NUMERO: $ticketNumber\nAREA: $areaChoosen')
-          },
-      child: Container(
-          margin: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              color: Colors.grey[100],
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.7),
-                  blurRadius: 7,
-                  offset: Offset(0, 3),
-                )
-              ]),
-          child: Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                child: Text(letra),
-                padding: EdgeInsets.fromLTRB(30, 10, 10, 10),
-              ),
-              Container(
-                width: 1,
-                height: 20,
-                color: Colors.black,
-                //padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 10),
-              ),
-              Container(
-                child: Text(numero),
-                padding:
-                    EdgeInsets.only(left: 10, right: 20, top: 10, bottom: 10),
-              ),
-              Container(
-                child: Text(quantidade),
-                padding: EdgeInsets.fromLTRB(140, 10, 0, 10),
-              ),
-            ],
-          )));
+  return Container(
+      child: InkWell(
+
+          onTap: () => {
+                ticketNumber = int.parse(numero),
+                areaChoosen = letra,
+                //print('NUMERO: $ticketNumber\nAREA: $areaChoosen')
+              },
+          onLongPress: () => {
+                ticketNumber = null,
+                areaChoosen = null,
+                //print('NUMERO: $ticketNumber\nAREA: $areaChoosen')
+              },
+          child: Container(
+              key: const Key('AreaOption'),
+              margin: EdgeInsets.symmetric(vertical: 5, horizontal: 25),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.grey[100],
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.7),
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    )
+                  ]),
+              child: Row(
+                //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    child: Text(letra),
+                    padding: EdgeInsets.fromLTRB(30, 10, 10, 10),
+                  ),
+                  Container(
+                    width: 1,
+                    height: 20,
+                    color: Colors.black,
+                    //padding: EdgeInsets.only(left: 5, right: 20, top: 10, bottom: 10),
+                  ),
+                  Container(
+                    child: Text(numero),
+                    padding: EdgeInsets.only(
+                        left: 10, right: 20, top: 10, bottom: 10),
+                  ),
+                  Container(
+                    child: Text(quantidade),
+                    padding: EdgeInsets.fromLTRB(140, 10, 0, 10),
+                  ),
+                ],
+              ))));
 }

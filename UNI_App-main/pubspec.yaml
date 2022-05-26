@@ -48,12 +48,18 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   material_design_icons_flutter: ^5.0.6595
+  flutter_driver: 
+    sdk: flutter
+    version: ^0.0.0
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  gherkin: ^2.0.8
+  flutter_gherkin: ^2.0.0
+  flutter_driver:
+    sdk: flutter
   test: any
   mockito: 
   flutter_launcher_icons: ^0.9.0
@@ -108,7 +114,6 @@ flutter:
   assets:
     - assets/
     - assets/images/
-    - assets/env/
     - assets/text/
 
   # An image asset can refer to one or more resolution-specific "variants", see
