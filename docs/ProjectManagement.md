@@ -8,7 +8,7 @@ You can find below information and references related with the project managemen
 * Iteration planning and retrospectives:
 
 ### Iteration 1 
-  * plans: Projects board at [begin](images/Iteration2_begin.png) and [end]() 
+  * plans: Projects board at [begin](https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/development/images/Iteration2_begin.png) and [end]() 
   * retrospectives: [Meeting notes](RetrospectiveMeeting.md)
 	
 
