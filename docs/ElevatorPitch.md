@@ -5,7 +5,7 @@ O que poderias fazer durante o tempo que desperdiças em filas lentas?
 
 UniTicket é uma aplicação que tem como objetivo poupar o recurso mais valioso de um estudante: o tempo. 
 
-Numa prespetiva comum ninguém gosta de esperar em filas Independemente do tempo que seja, até sermos atendidos a regra geral é: quanto menos tempo de espera, melhor!
+Numa perspetiva comum ninguém gosta de esperar em filas Independemente do tempo que seja, até sermos atendidos a regra geral é: quanto menos tempo de espera, melhor!
 
 A realidade da vida de um estudante ao longo da sua vida escolar é que à medida que os anos de escolaridade avançam, os estudantes ficam com cada vez menos tempo fazendo com que uma simples hora seja valiosíssima na qual seja possível tanto estudar como descansar.
 
