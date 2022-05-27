@@ -1,7 +1,7 @@
 
 import 'dart:ffi';
 
-import 'package:uni/model/UniTicket/TicketClient.dart';
+import 'package:uni/model/UniTicket/Client.dart';
 
 class AcademicServices {
 
