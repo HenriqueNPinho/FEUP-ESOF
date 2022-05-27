@@ -20,6 +20,7 @@ List getArea() {
   return [areaChoosen, name];
 }
 
+
 class TicketPageView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => TicketPageViewState();
@@ -235,7 +236,6 @@ void showCustomDialog(BuildContext context) {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => TicketCancelPageView()))),
-
                   ),
                   Container(
                     child: ElevatedButton(
@@ -323,6 +323,7 @@ Widget makeBoxInf() {
 }
 
 Widget makeBoxCard(String letra, String numero, String quantidade) {
+
   return Container(
       child: InkWell(
 
@@ -374,6 +375,4 @@ Widget makeBoxCard(String letra, String numero, String quantidade) {
                 ],
               ))));
 }
-
-
 
