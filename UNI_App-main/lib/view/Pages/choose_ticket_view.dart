@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image/image.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
-import 'package:uni/view/Pages/Cancel_ticket_page.dart';
+import 'package:uni/view/Pages/cancel_ticket_page.dart';
 import 'package:uni/view/Pages/bus_stop_selection_page.dart';
 
 

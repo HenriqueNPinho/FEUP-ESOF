@@ -231,8 +231,6 @@ void showCustomDialog(BuildContext context) {
                               borderRadius: BorderRadius.circular(10.0),
                             ))),
 
-                        onPressed: () => null),
-
                         onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(
