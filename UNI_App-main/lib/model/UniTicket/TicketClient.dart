@@ -15,7 +15,7 @@ class Client{
     return blocked;
   }
 
-  bool setBlocked() {
+  bool setBlocked(bool block) {
     return blocked = true;
   }
 

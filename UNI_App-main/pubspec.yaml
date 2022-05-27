@@ -60,10 +60,11 @@ dev_dependencies:
   flutter_gherkin: ^2.0.0
   flutter_driver:
     sdk: flutter
-  test: any
+  test: <latest_version>
   mockito: 
   flutter_launcher_icons: ^0.9.0
   flutter_native_splash: ^1.0.3
+
 
 flutter_icons:
   android: true

@@ -1,13 +1,9 @@
-import 'package:uni/model/TicketClient.dart';
+import 'package:uni/model/UniTicket/TicketClient.dart';
 
 class CheckClient{
 
 
 
-
-
-
-  }
 
   bool checkIsBlocked(Client client){
 
@@ -17,6 +13,7 @@ class CheckClient{
     else{
 
       client.setBlocked( true);
+      return true;
     }
   }
 
