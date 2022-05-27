@@ -13,5 +13,5 @@ You can find below information and references related with the project managemen
 	
 
 ### Iteration 2
-  * plans: Projects board at [begin](images/Iteration2_begin) and [end]() 
+  * plans: Projects board at [begin](https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/development/images/iteration_before_iter2.png) and [end]() 
   * retrospectives: [Meeting notes]()
