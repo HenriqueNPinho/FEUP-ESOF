@@ -3,12 +3,12 @@ ELEVATOR PITCH (começo)
 
 O que poderias fazer durante o tempo que desperdiças em filas lentas?
 
-UniTicket é uma aplicação que tem como objetivo poupar o recurso mais valioso de um estudante: o tempo. 
 
-Numa perspetiva comum ninguém gosta de esperar em filas Independemente do tempo que seja, até sermos atendidos a regra geral é: quanto menos tempo de espera, melhor!
+Numa prespetiva comum ninguém gosta de esperar em filas, mesmo sendo 15 minutos ou 30 minutos até sermos atendidos a regra geral é: quanto menos tempo à espera "melhor"!
 
-A realidade da vida de um estudante ao longo da sua vida escolar é que à medida que os anos de escolaridade avançam, os estudantes ficam com cada vez menos tempo fazendo com que uma simples hora seja valiosíssima na qual seja possível tanto estudar como descansar.
+A realidade da vida dum estudante ao longo da sua vida escolar é que à medida que os anos de escolaridade avançam, os estudantes ficam com cada vez menos tempo, fazendo com que uma simples hora seja valiosissima para tanto estudar como descansar.
 
-Este software é direcionado para todos os estudantes do campus e tem como objetivo principal tornar simples e acessivel o atendimento nos serviços académicos da Faculdade de Engenharia.
+De uma forma a poupar o recurso mais valioso de um estudante: o tempo, criámos a UniTicket direcionado para todos os estudantes do campus e tem como objetivo principal tornar simples e acessivel o atendimento nos serviços académicos da Faculdade de Engenharia.
 
-Esta aplicação permite a todos tirar uma senha online de maneira a que não seja necessário ir tirar presencialmente a senha à secretaria e esperar pela nossa vez no local.
+Esta aplicação permite a todos os estudantes tirar uma senha online de maneira a que não seja necessário ir presencialmente tirar as senhas à máquina junto à secretaria e esperar pela sua vez no local.
+
