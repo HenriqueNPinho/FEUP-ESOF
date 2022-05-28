@@ -63,7 +63,7 @@ The need to coordinate , manipulate, and handles input from users interactions :
 ## **Physical Architecture**
 
  <p align="center" justify="center">
-  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/main/images/Physical_architeture.png"/>
+  <img src="https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/development/images/Physical_architeture.png"/>
 </p>
 
 **User Client Machine**
