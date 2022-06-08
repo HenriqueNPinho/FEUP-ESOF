@@ -1,0 +1,22 @@
+
+CREATE TABLE secretaryA 
+(
+ id INTEGER PRIMARY KEY
+
+);
+INSERT INTO secretaryA VALUES(1);
+
+CREATE TABLE secretaryB 
+(
+ id INTEGER PRIMARY KEY
+
+);
+INSERT INTO secretaryB VALUES(1);
+
+CREATE TABLE secretaryC
+(
+ id INTEGER PRIMARY KEY AUTOINCREMENT
+
+);
+INSERT INTO secretaryC VALUES(1);
+
