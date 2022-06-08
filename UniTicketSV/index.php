@@ -13,11 +13,5 @@ updateSecA($db);
 updateSecB($db);
 updateSecC($db);
 
-$d=getSecA($db);
-$e=getSecB($db);
-$f=getSecC($db);
-
-echo " new a= ".$d['id']." new b= ".$e['id']." new c= ".$f['id'];
-
 ?>
 
