@@ -248,7 +248,7 @@ void showCustomDialog(BuildContext context) {
                               borderRadius: BorderRadius.circular(10.0),
                               //side: BorderSide(color: Colors.red)
                             ))),
-                        onPressed: () => null),
+                        onPressed: () => Navigator.pop(context)),
                   ),
                 ]),
               ],
