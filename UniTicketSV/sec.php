@@ -4,7 +4,6 @@ require_once('./db/takeTicket.php');
 
 $db=getDatabaseConnection();
 
-
 function error($msg){
     $response= array("success" => false, "message" => $msg);
     return json_encode($response);

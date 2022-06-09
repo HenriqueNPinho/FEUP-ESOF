@@ -1,8 +1,10 @@
+let url="http://localhost:8080/sec.php"
+//let url="http://web.fe.up.pt/~up201805000/UniTicketSV/sec.php"
 $(document).ready(function(){
    
     $("#BtnA").click(function(){
 
-        $.post("http://localhost:8080/sec.php",{ ////"http://web.fe.up.pt/~up201805000/UniTicketSV/sec.php"
+        $.post(url,{
             name: "A"
         },
             function(res, status){
@@ -16,7 +18,7 @@ $(document).ready(function(){
     });
 
     $("#BtnB").click(function(){
-        $.post("http://localhost:8080/sec.php",{
+        $.post(url,{
             name: "B"
         },
 
@@ -30,7 +32,7 @@ $(document).ready(function(){
     });
 
     $("#BtnC").click(function(){
-        $.post("http://localhost:8080/sec.php",{
+        $.post(url,{
             name: "C"
         },
 
@@ -46,7 +48,7 @@ $(document).ready(function(){
 
     $("#BtnCA").click(function(){
 
-        $.post("http://localhost:8080/sec.php",{ ////"http://web.fe.up.pt/~up201805000/UniTicketSV/sec.php"
+        $.post(url,{ ////"http://web.fe.up.pt/~up201805000/UniTicketSV/sec.php"
             name: "currA"
         },
             function(res, status){
@@ -61,7 +63,7 @@ $(document).ready(function(){
 
     $("#BtnCB").click(function(){
 
-        $.post("http://localhost:8080/sec.php",{ ////"http://web.fe.up.pt/~up201805000/UniTicketSV/sec.php"
+        $.post(url,{ ////"http://web.fe.up.pt/~up201805000/UniTicketSV/sec.php"
             name: "currB"
         },
             function(res, status){
@@ -76,7 +78,7 @@ $(document).ready(function(){
 
     $("#BtnCC").click(function(){
 
-        $.post("http://localhost:8080/sec.php",{ ////"http://web.fe.up.pt/~up201805000/UniTicketSV/sec.php"
+        $.post(url,{ ////"http://web.fe.up.pt/~up201805000/UniTicketSV/sec.php"
             name: "currC"
         },
             function(res, status){
