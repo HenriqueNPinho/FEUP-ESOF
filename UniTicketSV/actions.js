@@ -1,23 +1,18 @@
 $(document).ready(function(){
-
+   
     $("#BtnA").click(function(){
+
         $.post("http://localhost:8080/sec.php",{ ////"http://web.fe.up.pt/~up201805000/UniTicketSV/sec.php"
             name: "A"
         },
 
             function(res, status){
-            
+                
                 var data = JSON.parse(res);
-           
-                $("#statusText").html(data.message);
+                console.log(data)
+                $("#takeTicket").html(data.SecA);
             }
         );
-
-     /*   $.ajax({
-            type: "POST",
-            url: 'sec.php',
-            data: {name: 'A'},
-        });*/
      
     });
 
@@ -29,8 +24,8 @@ $(document).ready(function(){
             function(res, status){
             
                 var data = JSON.parse(res);
-            
-                $("#statusText").html(data.message);
+                console.log(data.SecB)
+                $("#takeTicket").html(data.SecB);
             }
         );
     });
@@ -43,8 +38,8 @@ $(document).ready(function(){
             function(res, status){
             
                 var data = JSON.parse(res);
-            
-                $("#statusText").html(data.message);
+                console.log(data.SecC)
+                $("#takeTicket").html(data.SecC);
             }
         );
     });
