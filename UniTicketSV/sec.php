@@ -12,6 +12,16 @@ function error($msg){
 
 $name= $_POST['name'];
 
+if($name=='currA'){
+    updateCurrA($db);
+}
+else if($name=='currB'){
+    updateCurrB($db);
+}
+else if($name=='currC'){
+    updateCurrC($db);
+}
+
 $a= getSecA($db);
 $b=getSecB($db);
 $c=getSecC($db);
@@ -39,12 +49,3 @@ else if($name=='B'){
 else if($name=='C'){
     updateSecC($db);
     }
-else if($name=='currA'){
-    updateCurrA($db);
-}
-else if($name=='currB'){
-    updateCurrB($db);
-}
-else if($name=='currC'){
-    updateCurrC($db);
-}

@@ -1,9 +1,21 @@
+<?php 
+require_once('./db/connection.php');
+require_once('./db/takeTicket.php');
 
+$db=getDatabaseConnection();
+
+$a= getSecA($db);
+$b=getSecB($db);
+$c=getSecC($db);
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>UniTicket</title>
     <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   
 </head>
 <body>
@@ -19,14 +31,14 @@
 
     <label for="SecState">
         Secretary A:
-        <p id="secA"></p>
+        <p id="secA"><?= $a['currA']?></p>
     </label>
     <button id="BtnCA">Next Ticket</button>
     <hr>
     
     <label for="SecState">
         Secretary B:
-        <p id="secB"></p>
+        <p id="secB"><?= $b['currB']?></p>
     </label>
     <button id="BtnCB">Next Ticket</button>
     <hr>
@@ -34,11 +46,10 @@
 
     <label for="SecState">
         Secretary C:
-        <p id="secC"></p>
+        <p id="secC"><?= $c['currC']?></p>
     </label>
     <button id="BtnCC">Next Ticket</button>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./actions.js"></script>
 </body>
 </html>
