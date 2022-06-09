@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image/image.dart';
+import 'package:uni/model/UniTicket/AcademicServices.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
 import 'package:uni/view/Widgets/terms_and_conditions.dart';
 import 'package:uni/view/Pages/cancel_ticket_page.dart';
+
+import '../../model/UniTicket/Client.dart';
 
 var ticketNumber = null;
 var areaChoosen = null;
@@ -20,16 +23,28 @@ List getArea() {
   return [areaChoosen, name];
 }
 
+Client client = Client();
+
+AcademicServices  academicServices = AcademicServices();
+
+
+
 
 class TicketPageView extends StatefulWidget {
+
   @override
   State<StatefulWidget> createState() => TicketPageViewState();
 }
 
+
+
 /// Manages the 'ticket' section of the app.
 class TicketPageViewState extends GeneralPageViewState {
+
+
   @override
   Widget getBody(BuildContext context) {
+    academicServices.getHttpInfo();
     final MediaQueryData queryData = MediaQuery.of(context);
     return ListView(children: <Widget>[
       Container(
@@ -52,9 +67,9 @@ class TicketPageViewState extends GeneralPageViewState {
                   ),
                 ],
               ),
-              makeBoxCard('A', '025', '02'),
-              makeBoxCard('B', '025', '05'),
-              makeBoxCard('C', '025', '25'),
+              makeBoxCard('A', academicServices.getSecA() , academicServices.getWaitA()),
+              makeBoxCard('B', academicServices.getSecB() , academicServices.getWaitB()),
+              makeBoxCard('C', academicServices.getSecC(), academicServices.getWaitC()),
             ],
           )),
 

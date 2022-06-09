@@ -6,7 +6,7 @@ class Client{
   bool blocked = false;
   int currentTicket;
 
-  Client(String email){
+  Client(){
     this.email = email;
 
   }
