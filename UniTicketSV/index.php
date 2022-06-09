@@ -19,42 +19,26 @@
 
     <label for="SecState">
         Secretary A:
-        <p id="secA" value='0' ></p>
+        <p id="secA"></p>
     </label>
-    <button type="button" onclick="rps('secA')">Next Ticket</button>
+    <button id="BtnCA">Next Ticket</button>
     <hr>
     
     <label for="SecState">
         Secretary B:
-        <p id="secB" value='0' ></p>
+        <p id="secB"></p>
     </label>
-    <button type="button" onclick="rps('secB')">Next Ticket</button>
+    <button id="BtnCB">Next Ticket</button>
     <hr>
 
 
     <label for="SecState">
         Secretary C:
-        <p id="secC" value='0' ></p>
+        <p id="secC"></p>
     </label>
-    <button type="button" onclick="rps('secC')">Next Ticket</button>
-
-
+    <button id="BtnCC">Next Ticket</button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./actions.js"></script>
 </body>
 </html>
-<script>
-var element= document.getElementById('secA');
-function rps(id) {
-   
-    var element= document.getElementById(id);
-  value = parseInt(element.getAttribute('value'), 10)+1; 
-
-    if(value>100)
-        value=1;
-    element.setAttribute('value', value);
-    
-    element.innerHTML = value;
-}
-</script>

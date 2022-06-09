@@ -19,8 +19,15 @@ $c=getSecC($db);
 $response=array();
 $response["success"]=true;
 $response["SecA"]="Senha A= ".$a['ticketA'];
+$response["currA"]=$a['currA'];
+
 $response["SecB"]="Senha B= ".$b['ticketB'];
+$response["currB"]=$b['currB'];
+
 $response["SecC"]="Senha C= ".$c['ticketC'];
+$response["currC"]=$c['currC'];
+
+
 echo json_encode($response);
 
 if($name=='A'){
@@ -32,3 +39,12 @@ else if($name=='B'){
 else if($name=='C'){
     updateSecC($db);
     }
+else if($name=='currA'){
+    updateCurrA($db);
+}
+else if($name=='currB'){
+    updateCurrB($db);
+}
+else if($name=='currC'){
+    updateCurrC($db);
+}
