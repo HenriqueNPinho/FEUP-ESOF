@@ -8,6 +8,16 @@ $a= getSecA($db);
 $b=getSecB($db);
 $c=getSecC($db);
 
+function dif(int $a,int $b){
+
+    if($b-$a>=0){
+        return $b-$a;
+    }
+    else{
+        return (100-$a)+$b;
+    }
+   
+}
 
 ?>
 <!DOCTYPE html>
@@ -19,14 +29,42 @@ $c=getSecC($db);
   
 </head>
 <body>
-    <label for="take-ticket">
-        Senha Tirada:
-        <p id="takeTicket"></p>
-    </label>
+    <div style="display: flex; flex-direction:row; ">
+        <span style="margin-right:2em;">
+            <label for="take-ticket">
+                <b>Senha Tirada:</b>
+                <p id="takeTicket"></p>
+            </label>
 
-    <button type="button" id="BtnA">SENHA A</button>
-    <button type="button" id="BtnB">SENHA B</button>
-    <button type="button" id="BtnC">SENHA C</button>
+            <button type="button" id="BtnA">SENHA A</button>
+            <button type="button" id="BtnB">SENHA B</button>
+            <button type="button" id="BtnC">SENHA C</button>
+        </span>
+
+        <div style="border-left:1px solid #000;height:auto ; margin-right: 2em;"></div>
+        
+        <span>
+            <b>Em espera:</b>
+            <p></p>
+            <label style="margin-right:2em;">
+                Senha A:
+                <span id="waitA"><?= dif($a['currA'],$a['ticketA']-1)?></span>
+            </label>
+
+            <label style="margin-right:2em;">
+                Senha B:
+                <span id="waitB"><?= dif($b['currB'],$b['ticketB']-1)?></span>
+            </label>
+
+            <label style="margin-right:2em;">
+                Senha C:
+                <span id="waitC"><?= dif($c['currC'],$c['ticketC']-1)?></span>
+            </label>
+
+        </span>
+    </div>
+
+
     <hr>
 
     <label for="SecState">
