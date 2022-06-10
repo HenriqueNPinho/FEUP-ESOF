@@ -1,8 +1,8 @@
 Feature: Confirm a ticket
     The app should let choose a ticket and ask to confirm
-
+//onde está o Given ???
 @tag
-Scenario:  The ticket tab opens e o crlh
+Scenario:  The ticket tab opens
     When I tap the "AreaOption" button
     And I tap the "PedirSenhaButton" button
     And I tap the "ConfirmarSimButton" button

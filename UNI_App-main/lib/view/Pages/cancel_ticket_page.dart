@@ -100,6 +100,7 @@ void cancelPopUp(BuildContext context) {
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Colors.black),
+                      key: const Key('Confirmation'),
                       child: Text('Cancelar senha?'),
                     ),
                   ),
