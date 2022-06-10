@@ -24,10 +24,12 @@ import 'package:uni/view/navigation_service.dart';
 import 'package:uni/view/theme.dart';
 import 'package:uni/view/Pages/cancel_ticket_page.dart';
 import '../../model/UniTicket/Client.dart';
+import 'package:uni/model/UniTicket/Client.dart';
 
 import 'controller/on_start_up.dart';
 import 'model/UniTicket/AcademicServices.dart';
 import 'model/schedule_page_model.dart';
+
 /// Stores the state of the app
 final Store<AppState> state = Store<AppState>(appReducers,
     /* Function defined in the reducers file */
@@ -39,8 +41,6 @@ SentryEvent beforeSend(SentryEvent event) {
 }
 
 Future<void> main() async {
-
-
   OnStartUp.onStart(state);
   await SentryFlutter.init(
     (options) {
@@ -70,22 +70,18 @@ class MyApp extends StatefulWidget {
 
 /// Manages the app depending on its current state
 class MyAppState extends State<MyApp> {
-  Client client = Client();
-
   MyAppState({@required this.state}) {}
 
   final Store<AppState> state;
 
   @override
   Widget build(BuildContext context) {
-    final AcademicServices  academicServices = AcademicServices();
+    final AcademicServices academicServices = AcademicServices();
     academicServices.getHttpInfo();
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
     return StoreProvider(
-
-
       store: state,
       child: MaterialApp(
           title: 'uni',
@@ -111,10 +107,12 @@ class MyAppState extends State<MyApp> {
                 return PageTransition.makePageTransition(
                     page: AboutPageView(), settings: settings);
               case '/' + Constants.navTicket:
-                if(gethasTicket() == true){
-                  return PageTransition.makePageTransition(page: TicketCancelPageView(), settings: settings);
+                if (gethasTicket() == true) {
+                  return PageTransition.makePageTransition(
+                      page: TicketCancelPageView(), settings: settings);
                 }
-                return PageTransition.makePageTransition( page: TicketPageView(), settings: settings);
+                return PageTransition.makePageTransition(
+                    page: TicketPageView(), settings: settings);
               case '/' + Constants.navBugReport:
                 return PageTransition.makePageTransition(
                     page: BugReportPageView(),
