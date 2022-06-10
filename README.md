@@ -17,10 +17,11 @@ You can find here detailed about the product (or mini-app or module), from a hig
   * [Logical architecture](docs/ArchitectureAndDesign.md#Logical-architecture)
   * [Physical architecture](docs/ArchitectureAndDesign.md#Physical-architecture)
   * [Prototype](docs/ArchitectureAndDesign.md#Vertical-prototype)
-* [Implementation]
-* [Test]
-* [Configuration and change management]
-* [Project management](docs/ProjectManagement.md#Project-management)
+* [Project management](docs/ProjectManagement.md)
+* Restrospective Meetings
+  * [Retrospective Meeting #1](docs/RetrospectiveMeeting.md)
+  * [Retrospective Meeting #2](docs/RetrospectiveMeeting_iter2.md)
+  * [Retrospective Meeting #3](docs/RetrospectiveMeeting_iter3.md)
 
 ---
 ## Team Members

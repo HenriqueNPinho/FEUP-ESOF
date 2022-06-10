@@ -1,4 +1,4 @@
-ELEVATOR PITCH (começo)
+# ELEVATOR PITCH 
 
 
 O que poderias fazer durante o tempo que desperdiças em filas lentas?
