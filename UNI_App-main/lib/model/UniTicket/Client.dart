@@ -27,7 +27,7 @@ class Client{
 
 
   bool getBlocked(){
-    DateTime now = new DateTime.now();
+    DateTime now = DateTime.now();
     if(now.day != this.timeCancelled.day) {
       this.blocked = false;
 
@@ -48,7 +48,7 @@ class Client{
     this.ticketsCanceled++;
     if(this.ticketsCanceled == 3){
       this.blocked = true;
-      this.timeCancelled = new DateTime.now();
+      this.timeCancelled =  DateTime.now();
 
     }
 
