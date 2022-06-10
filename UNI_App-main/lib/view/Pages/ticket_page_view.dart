@@ -144,12 +144,12 @@ void helpPopUp(BuildContext context) {
               color: Colors.white, borderRadius: BorderRadius.circular(20)),
           child: Center(
             child: DefaultTextStyle(
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
-              child: Text('Desenrasca-te LOL'),
+              child: Text('A - Secretaria\nB - Tesouraria\nC - Outro Serviço'),
             ),
           ),
         ),
