@@ -18,4 +18,4 @@ You can find below information and references related with the project managemen
 
 ### Iteration 3
   * plans: Projects board at [begin](https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/development/images/iteration3begin.png) and [end](https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/development/images/iteration3end.png) 
-  * retrospectives: [Meeting notes]()
+  * retrospectives: [Meeting notes](https://github.com/LEIC-ES-2021-22/2LEIC11T5/blob/development/docs/RetrospectiveMeeting_iter3.md)
