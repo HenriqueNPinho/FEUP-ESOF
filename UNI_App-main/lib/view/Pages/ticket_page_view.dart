@@ -9,7 +9,6 @@ import '../../model/UniTicket/Client.dart';
 import 'package:uni/main.dart' as academic;
 
 var ticketNumber = null;
-var realTicketNumber = null;
 var areaChoosen = null;
 
 bool hasTicket = false;
@@ -23,7 +22,7 @@ void setHasTicket(bool value) {
 }
 
 String getTicket() {
-  return realTicketNumber.toString();
+  return ticketNumber.toString();
 }
 
 List getArea() {
@@ -245,7 +244,7 @@ void showCustomDialog(BuildContext context) {
                           fontWeight: FontWeight.bold,
                           color: Colors.black),
                       child: Text(
-                          'Confirmar senha $areaChoosen$realTicketNumber?'),
+                          'Confirmar senha $areaChoosen $ticketNumber?'),
                     ),
                   ),
                   margin: EdgeInsets.fromLTRB(30, 50, 30, 50),
@@ -359,14 +358,14 @@ Widget makeBoxCard(String letra, String numero, String quantidade) {
   return Container(
       child: InkWell(
           onTap: () => {
-                realTicketNumber =
+                ticketNumber =
                     int.parse(numero) + int.parse(quantidade) + 1,
-                ticketNumber = int.parse(numero),
+               
                 areaChoosen = letra,
                 //print('NUMERO: $ticketNumber\nAREA: $areaChoosen')
               },
           onLongPress: () => {
-                realTicketNumber = null,
+                
                 ticketNumber = null,
                 areaChoosen = null,
                 //print('NUMERO: $ticketNumber\nAREA: $areaChoosen')
