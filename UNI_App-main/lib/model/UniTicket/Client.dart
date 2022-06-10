@@ -1,68 +1,48 @@
-class Client{
+int ticketsCanceled = 0;
+String currentService;
+bool blocked = false;
+int currentTicket;
+bool hasTicket = false;
+DateTime timeCancelled;
 
-  int ticketsCanceled =0;
-  String currentService;
-  bool blocked = false;
-  int currentTicket;
-  bool hasTicket = false;
-  DateTime timeCancelled;
-
-  Client(){
-
-  }
-
-/*   void getClient(String email){
-    if(email==null){
-      return 
-    }
-  }
- */
-  bool gethasTicket(){
-    return hasTicket;
-  }
-  void setHastTicket(bool value){
-   hasTicket = value; 
+bool gethasTicket() {
+  return hasTicket;
 }
 
+void setHastTicket(bool value) {
+  hasTicket = value;
+}
 
-
-  bool getBlocked(){
-    DateTime now = DateTime.now();
-    if(now.day != this.timeCancelled.day) {
-      this.blocked = false;
-
+bool getBlocked() {
+  DateTime now = DateTime.now();
+  if (blocked == true) {
+    if (now.day != timeCancelled.day) {
+      blocked = false;
     }
-    return this.blocked;
-
   }
+  return blocked;
+}
 
-  bool setBlocked(bool block) {
-    return blocked = true;
+bool setBlocked(bool block) {
+  return blocked = true;
+}
+
+void setTicketsCanceled() {
+  ticketsCanceled++;
+  if (ticketsCanceled == 3) {
+    blocked = true;
+    timeCancelled = DateTime.now();
   }
+}
 
-  void setTicketsCanceled(){
+int getTicketsCanceled() {
+  return ticketsCanceled;
+}
 
-    this.ticketsCanceled++;
-    if(this.ticketsCanceled == 3){
-      this.blocked = true;
-      this.timeCancelled =  DateTime.now();
+String getCurrentService() {
+  return currentService;
+}
 
-    }
-
-  }
-
-  int getTicketsCanceled()
-  {
-    return this.ticketsCanceled;
-  }
-
-  String getCurrentService(){
-
-    return this.currentService;
-  }
-
-  void setCurrentService(String service){
-    this.currentService = service;
-  }
-
+void setCurrentService(String service) {
+  currentService = service;
 }
