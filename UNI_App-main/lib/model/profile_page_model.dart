@@ -4,6 +4,7 @@ import 'package:uni/model/app_state.dart';
 import 'package:uni/view/Pages/profile_page_view.dart';
 import 'dart:io';
 
+import 'UniTicket/AcademicServices.dart';
 import 'entities/course.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -29,6 +30,7 @@ class _ProfilePageState extends State<ProfilePage> {
     currentState = {};
     courses = [];
     profilePicFile = null;
+
   }
 
   @override

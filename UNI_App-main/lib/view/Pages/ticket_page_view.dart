@@ -5,11 +5,14 @@ import 'package:uni/model/UniTicket/AcademicServices.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
 import 'package:uni/view/Widgets/terms_and_conditions.dart';
 import 'package:uni/view/Pages/cancel_ticket_page.dart';
-
 import '../../model/UniTicket/Client.dart';
+import'package:uni/main.dart' as academic;
 
 var ticketNumber = null;
 var areaChoosen = null;
+
+
+
 
 String getTicket() {
   return ticketNumber.toString();
@@ -23,14 +26,10 @@ List getArea() {
   return [areaChoosen, name];
 }
 
-Client client = Client();
-
-AcademicServices  academicServices = AcademicServices();
-
-
-
+//Client client = Client();
 
 class TicketPageView extends StatefulWidget {
+
 
   @override
   State<StatefulWidget> createState() => TicketPageViewState();
@@ -38,13 +37,28 @@ class TicketPageView extends StatefulWidget {
 
 
 
+
+
 /// Manages the 'ticket' section of the app.
 class TicketPageViewState extends GeneralPageViewState {
+  AcademicServices academicServices = AcademicServices();
+  void _updateServices(){
 
+    setState((){
 
+      academicServices.getHttpInfo();
+    });
+  }
   @override
   Widget getBody(BuildContext context) {
-    academicServices.getHttpInfo();
+  academicServices.getHttpInfo();
+  String secA = academicServices.getSecA();
+  String secB = academicServices.getSecB();
+  String secC = academicServices.getSecC();
+  String waitA = academicServices.getWaitA();
+  String waitB = academicServices.getWaitB();
+  String waitC = academicServices.getWaitC();
+
     final MediaQueryData queryData = MediaQuery.of(context);
     return ListView(children: <Widget>[
       Container(
@@ -67,9 +81,9 @@ class TicketPageViewState extends GeneralPageViewState {
                   ),
                 ],
               ),
-              makeBoxCard('A', academicServices.getSecA() , academicServices.getWaitA()),
-              makeBoxCard('B', academicServices.getSecB() , academicServices.getWaitB()),
-              makeBoxCard('C', academicServices.getSecC(), academicServices.getWaitC()),
+              makeBoxCard('A', secA , waitA),
+              makeBoxCard('B', secB , waitB),
+              makeBoxCard('C', secC, waitC),
             ],
           )),
 
@@ -109,7 +123,9 @@ class TicketPageViewState extends GeneralPageViewState {
                 }),
       )
     ]);
+
   }
+
 }
 
 void helpPopUp(BuildContext context) {

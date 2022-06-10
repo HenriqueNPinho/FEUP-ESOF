@@ -1,97 +1,94 @@
+import 'package:flutter/cupertino.dart';
 import 'package:html/parser.dart';
 
+
 import 'package:http/http.dart' as http;
+import 'package:html/dom.dart' as dom;
 
-class AcademicServices{
-
-  var serviceAInfo = ['A','0','0'];
-
-  var serviceBInfo = ['B','0','0'];
-  var serviceCInfo = ['C','0','0'];
-
-  AcademicServices(){
+class AcademicServices {
 
 
-  }
+  String servAInfo ='';
+  String servBInfo ='';
+  String servCInfo =  '';
+  String waitC = '';
+  String waitA = '';
+  String waitB = '';
 
-  String getSecA(){
-    return serviceAInfo[1];
-  }
+ static final AcademicServices _instance = AcademicServices._internal();
 
+  factory AcademicServices() => _instance;
 
-  String getSecB(){
-    return serviceBInfo[1];
-  }
+  AcademicServices._internal(){
 
-
-  String getSecC(){
-    return serviceCInfo[1];
-
+    this.getHttpInfo();
+    this.getHttpInfo();
+    this.getHttpInfo();
 
   }
 
-  String getWaitA(){
 
-    return serviceAInfo[2];
+
+
+
+  String getSecA() {
+    return servAInfo;
   }
 
 
-  String getWaitB(){
-
-    return serviceBInfo[2];
+  String getSecB() {
+    return servBInfo;
   }
 
 
-  String getWaitC(){
+  String getSecC() {
+    return servCInfo;
+  }
 
-    return serviceCInfo[2];
+  String getWaitA() {
+    return waitA;
   }
 
 
-  List<Object> getServiceAInfo(){
-    return serviceAInfo;
+  String getWaitB() {
+    return waitB;
   }
 
-  List<Object> getServiceBInfo(){
-    return serviceBInfo;
-  }
 
-  List<Object> getServiceCInfo(){
-    return serviceBInfo;
+  String getWaitC() {
+    return waitC;
   }
 
   Future<void> getHttpInfo() async {
-    final response =
-        await http.Client().get(Uri.parse("https://web.fe.up.pt/~up201805000/UniTicketSV/"));
-        if(response.statusCode == 200) {
-          var document = parse(response.body);
-          serviceAInfo[1] = (document..getElementById("secA")) as String;
-          serviceBInfo[1] = document.getElementById("secB") as String;
-          serviceBInfo[1] = document.getElementById("secC") as String;
-          serviceAInfo[2] = document.getElementById("waitA") as String;
-          serviceBInfo[2] = document.getElementById("waitB") as String;
-          serviceBInfo[2] = document.getElementById("waitC") as String;
+    final url = Uri.parse('https://web.fe.up.pt/~up201805000/UniTicketSV/');
+    final response = await http.Client().get(url);
+    var document = parse(response.body);
+    //print(document);
 
-        }else{
+    if (response.statusCode == 200) {
+      //print(document.getElementById("secA").text);
 
-          throw Exception();
-        }
-  }
-
-
-
-  }
-
-  void getHttpB() {
-    Future<http.Response> fetchAlbum() {
-      return http.get(
-          Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
+      //print(document.body.text);
+      servAInfo = document
+          .getElementById('secA')
+          .text;
+      //print(this.getSecA() + "here");
+     // print(document.getElementById('secB'));
+     // print(document.getElementById('secC'));
+     // print(document.getElementById('secA'));
+      this.servBInfo = document.getElementById('secB').text;
+      this.servCInfo = document.getElementById('secC').text;
+      this.waitA = document.getElementById('waitA').text;
+      this.waitB = document.getElementById('waitB').text;
+      this.waitC = document.getElementById('waitC').text;
+      //print(this.getWaitB() + "here");
+     // print( getSecA());
+    } else {
+      throw Exception();
     }
   }
-
-  void getHttpC(){
-    Future<http.Response> fetchAlbum() {
-      return http.get(Uri.parse('https://jsonplaceholder.typicode.com/albums/1'));
-    }
 
 }
+
+
+

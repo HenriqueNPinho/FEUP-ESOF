@@ -24,8 +24,8 @@ import 'package:uni/view/navigation_service.dart';
 import 'package:uni/view/theme.dart';
 
 import 'controller/on_start_up.dart';
+import 'model/UniTicket/AcademicServices.dart';
 import 'model/schedule_page_model.dart';
-
 /// Stores the state of the app
 final Store<AppState> state = Store<AppState>(appReducers,
     /* Function defined in the reducers file */
@@ -37,6 +37,8 @@ SentryEvent beforeSend(SentryEvent event) {
 }
 
 Future<void> main() async {
+
+
   OnStartUp.onStart(state);
   await SentryFlutter.init(
     (options) {
@@ -54,6 +56,8 @@ Future<void> main() async {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
+    AcademicServices academicServices = AcademicServices();
+    academicServices.getHttpInfo();
     return MyAppState(
         state: Store<AppState>(appReducers,
             /* Function defined in the reducers file */
@@ -70,10 +74,14 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final AcademicServices  academicServices = AcademicServices();
+    academicServices.getHttpInfo();
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
     return StoreProvider(
+
+
       store: state,
       child: MaterialApp(
           title: 'uni',
