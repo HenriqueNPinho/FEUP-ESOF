@@ -1,14 +1,14 @@
 class Client{
 
-  String email;
   int ticketsCanceled;
   String currentService;
   bool blocked = false;
   int currentTicket;
   bool hasTicket = false;
+  DateTime timeCancelled;
 
   Client(){
-    this.email = email;
+
   }
 
 /*   void getClient(String email){
@@ -27,15 +27,31 @@ class Client{
 
 
   bool getBlocked(){
-    return blocked;
+    DateTime now = new DateTime.now();
+    if(now.day != this.timeCancelled.day) {
+      this.blocked = false;
+
+    }
+    return this.blocked;
+
   }
 
   bool setBlocked(bool block) {
     return blocked = true;
   }
 
-  void setTicketsCanceled(int numbTickets){
-    this.ticketsCanceled = numbTickets;
+  void setTicketsCanceled(){
+    if(this.ticketsCanceled == 0){
+
+
+    }
+    this.ticketsCanceled++;
+    if(this.ticketsCanceled == 3){
+      this.blocked = true;
+      this.timeCancelled = new DateTime.now();
+
+    }
+
   }
 
   int getTicketsCanceled()
