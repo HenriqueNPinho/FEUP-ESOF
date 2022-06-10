@@ -1,6 +1,6 @@
 class Client{
 
-  int ticketsCanceled;
+  int ticketsCanceled =0;
   String currentService;
   bool blocked = false;
   int currentTicket;
@@ -41,10 +41,7 @@ class Client{
   }
 
   void setTicketsCanceled(){
-    if(this.ticketsCanceled == 0){
 
-
-    }
     this.ticketsCanceled++;
     if(this.ticketsCanceled == 3){
       this.blocked = true;
