@@ -3,6 +3,7 @@ Feature: Confirm a ticket
 //onde está o Given ???
 @tag
 Scenario:  The ticket tab opens
+    Given the student in ""
     When I tap the "AreaOption" button
     And I tap the "PedirSenhaButton" button
     And I tap the "ConfirmarSimButton" button

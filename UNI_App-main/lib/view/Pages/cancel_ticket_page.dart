@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uni/model/UniTicket/AcademicServices.dart';
 import 'package:uni/model/UniTicket/Client.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
 import 'package:uni/view/Pages/ticket_page_view.dart';
@@ -6,6 +7,10 @@ import 'package:uni/view/Pages/ticket_page_view.dart';
 class TicketCancelPageView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => TicketCancelViewState();
+}
+
+String getWait() {
+  return (realTicketNumber - ticketNumber - 1).toString();
 }
 
 /// Manages the 'about' section of the app
@@ -42,6 +47,10 @@ class TicketCancelViewState extends GeneralPageViewState {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 40)),
+                      Text('Em espera: ${getWait()}',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18)),
                     ]),
               ),
             ),
