@@ -122,10 +122,13 @@ void cancelPopUp(BuildContext context) {
                                 RoundedRectangleBorder>(RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ))),
-                        onPressed: () => Navigator.push(
+                        onPressed: (){
+                          setHasTicket(false);
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => TicketPageView()))),
+                                builder: (context) => TicketPageView()));
+                        } ),
                   ),
                   Container(
                     child: ElevatedButton(

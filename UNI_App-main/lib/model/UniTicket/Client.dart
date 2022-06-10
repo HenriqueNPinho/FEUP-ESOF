@@ -5,11 +5,26 @@ class Client{
   String currentService;
   bool blocked = false;
   int currentTicket;
+  bool hasTicket = false;
 
   Client(){
     this.email = email;
-
   }
+
+/*   void getClient(String email){
+    if(email==null){
+      return 
+    }
+  }
+ */
+  bool gethasTicket(){
+    return hasTicket;
+  }
+  void setHastTicket(bool value){
+   hasTicket = value; 
+}
+
+
 
   bool getBlocked(){
     return blocked;
@@ -35,7 +50,6 @@ class Client{
 
   void setCurrentService(String service){
     this.currentService = service;
-
   }
 
 }

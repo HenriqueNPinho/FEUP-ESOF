@@ -11,7 +11,12 @@ import'package:uni/main.dart' as academic;
 var ticketNumber = null;
 var areaChoosen = null;
 
+bool hasTicket= false;
 
+bool gethasTicket() { return hasTicket; } 
+void setHasTicket(bool value){
+  hasTicket = value; 
+} 
 
 
 String getTicket() {
@@ -34,9 +39,6 @@ class TicketPageView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => TicketPageViewState();
 }
-
-
-
 
 
 /// Manages the 'ticket' section of the app.
@@ -262,11 +264,15 @@ void showCustomDialog(BuildContext context) {
                                 RoundedRectangleBorder>(RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ))),
-
-                        onPressed: () => Navigator.push(
+                          onPressed: () {
+                            setHasTicket(true);
+                           /*  client.hasTicket==true;
+                            client.setCurrentService('$areaChoosen$ticketNumber'); */
+                            Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => TicketCancelPageView()))),
+                                builder: (context) => TicketCancelPageView())); 
+                          },),
                   ),
                   Container(
                     child: ElevatedButton(

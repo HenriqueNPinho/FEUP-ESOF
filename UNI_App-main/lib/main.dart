@@ -22,6 +22,8 @@ import 'package:uni/view/Pages/splash_page_view.dart';
 import 'package:uni/view/Widgets/page_transition.dart';
 import 'package:uni/view/navigation_service.dart';
 import 'package:uni/view/theme.dart';
+import 'package:uni/view/Pages/cancel_ticket_page.dart';
+import '../../model/UniTicket/Client.dart';
 
 import 'controller/on_start_up.dart';
 import 'model/UniTicket/AcademicServices.dart';
@@ -68,6 +70,8 @@ class MyApp extends StatefulWidget {
 
 /// Manages the app depending on its current state
 class MyAppState extends State<MyApp> {
+  Client client = Client();
+
   MyAppState({@required this.state}) {}
 
   final Store<AppState> state;
@@ -107,8 +111,10 @@ class MyAppState extends State<MyApp> {
                 return PageTransition.makePageTransition(
                     page: AboutPageView(), settings: settings);
               case '/' + Constants.navTicket:
-                return PageTransition.makePageTransition(
-                    page: TicketPageView(), settings: settings);
+                if(gethasTicket() == true){
+                  return PageTransition.makePageTransition(page: TicketCancelPageView(), settings: settings);
+                }
+                return PageTransition.makePageTransition( page: TicketPageView(), settings: settings);
               case '/' + Constants.navBugReport:
                 return PageTransition.makePageTransition(
                     page: BugReportPageView(),
