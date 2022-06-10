@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uni/model/UniTicket/Client.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
 import 'package:uni/view/Pages/ticket_page_view.dart';
 
@@ -122,13 +123,14 @@ void cancelPopUp(BuildContext context) {
                                 RoundedRectangleBorder>(RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ))),
-                        onPressed: (){
+                        onPressed: () {
                           setHasTicket(false);
+                          setTicketsCanceled();
                           Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => TicketPageView()));
-                        } ),
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => TicketPageView()));
+                        }),
                   ),
                   Container(
                     child: ElevatedButton(

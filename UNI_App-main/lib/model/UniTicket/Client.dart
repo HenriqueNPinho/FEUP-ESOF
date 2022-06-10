@@ -5,6 +5,11 @@ int currentTicket;
 bool hasTicket = false;
 DateTime timeCancelled;
 
+String getNextDay() {
+  var aux = timeCancelled.add(const Duration(hours: 24));
+  return DateTime(aux.year, aux.month, aux.day).toString().split(' ')[0];
+}
+
 bool gethasTicket() {
   return hasTicket;
 }

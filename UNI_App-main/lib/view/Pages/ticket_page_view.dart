@@ -9,20 +9,15 @@ import '../../model/UniTicket/Client.dart';
 import 'package:uni/main.dart' as academic;
 
 var ticketNumber = null;
+var realTicketNumber = null;
 var areaChoosen = null;
-
-bool hasTicket = false;
-
-bool gethasTicket() {
-  return hasTicket;
-}
 
 void setHasTicket(bool value) {
   hasTicket = value;
 }
 
 String getTicket() {
-  return ticketNumber.toString();
+  return realTicketNumber.toString();
 }
 
 List getArea() {
@@ -244,7 +239,7 @@ void showCustomDialog(BuildContext context) {
                           fontWeight: FontWeight.bold,
                           color: Colors.black),
                       child: Text(
-                          'Confirmar senha $areaChoosen $ticketNumber?'),
+                          'Confirmar senha $areaChoosen$realTicketNumber?'),
                     ),
                   ),
                   margin: EdgeInsets.fromLTRB(30, 50, 30, 50),
@@ -262,12 +257,20 @@ void showCustomDialog(BuildContext context) {
                                   RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
                           ))),
-                      onPressed: () {
-                        setHasTicket(true);
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => TicketCancelPageView()));
+                      onPressed: () => {
+                        if (!getBlocked())
+                          {
+                            setHasTicket(true),
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        TicketCancelPageView())),
+                          }
+                        else
+                          {
+                            blockedPopup(context),
+                          }
                       },
                     ),
                   ),
@@ -287,6 +290,52 @@ void showCustomDialog(BuildContext context) {
                 ]),
               ],
             )),
+      );
+    },
+    transitionBuilder: (_, anim, __, child) {
+      Tween<Offset> tween;
+      if (anim.status == AnimationStatus.reverse) {
+        tween = Tween(begin: Offset(-1, 0), end: Offset.zero);
+      } else {
+        tween = Tween(begin: Offset(1, 0), end: Offset.zero);
+      }
+
+      return SlideTransition(
+        position: tween.animate(anim),
+        child: FadeTransition(
+          opacity: anim,
+          child: child,
+        ),
+      );
+    },
+  );
+}
+
+void blockedPopup(BuildContext context) {
+  showGeneralDialog(
+    context: context,
+    barrierLabel: "blocked",
+    barrierDismissible: true,
+    barrierColor: Colors.black.withOpacity(0.5),
+    transitionDuration: Duration(milliseconds: 500),
+    pageBuilder: (_, __, ___) {
+      return Center(
+        child: Container(
+          height: 200,
+          margin: EdgeInsets.symmetric(horizontal: 20),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(20)),
+          child: Center(
+            child: DefaultTextStyle(
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black),
+              child: Text('Estás blockeado até\n${getNextDay()}'),
+            ),
+          ),
+        ),
       );
     },
     transitionBuilder: (_, anim, __, child) {
@@ -330,7 +379,7 @@ Widget makeBoxInf() {
           ),
           Container(
             child: Text(
-              'Horário de atendimento: 11h às 16h .\nEmissão de Senha: 10h30 às 15h30 .',
+              'Horário de atendimento: 11h às 16h .\nEmissão de Senha: 10h30 às 15h30.',
               key: const Key('work_information'),
             ),
           ),
@@ -358,14 +407,14 @@ Widget makeBoxCard(String letra, String numero, String quantidade) {
   return Container(
       child: InkWell(
           onTap: () => {
-                ticketNumber =
+                realTicketNumber =
                     int.parse(numero) + int.parse(quantidade) + 1,
-               
+                ticketNumber = int.parse(numero),
                 areaChoosen = letra,
                 //print('NUMERO: $ticketNumber\nAREA: $areaChoosen')
               },
           onLongPress: () => {
-                
+                realTicketNumber = null,
                 ticketNumber = null,
                 areaChoosen = null,
                 //print('NUMERO: $ticketNumber\nAREA: $areaChoosen')
