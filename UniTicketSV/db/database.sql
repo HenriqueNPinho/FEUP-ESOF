@@ -1,0 +1,25 @@
+
+CREATE TABLE secretaryA 
+(
+ticketA INTEGER PRIMARY KEY,
+currA INTEGER
+
+);
+INSERT INTO secretaryA VALUES(1,1);
+
+CREATE TABLE secretaryB 
+(
+ ticketB INTEGER PRIMARY KEY,
+ currB INTEGER
+
+);
+INSERT INTO secretaryB VALUES(1,1);
+
+CREATE TABLE secretaryC
+(
+ ticketC INTEGER PRIMARY KEY,
+ currC INTEGER
+
+);
+INSERT INTO secretaryC VALUES(1,1);
+
