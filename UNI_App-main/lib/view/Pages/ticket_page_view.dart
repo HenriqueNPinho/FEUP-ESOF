@@ -266,8 +266,6 @@ void showCustomDialog(BuildContext context) {
                             ))),
                           onPressed: () {
                             setHasTicket(true);
-                           /*  client.hasTicket==true;
-                            client.setCurrentService('$areaChoosen$ticketNumber'); */
                             Navigator.push(
                             context,
                             MaterialPageRoute(
