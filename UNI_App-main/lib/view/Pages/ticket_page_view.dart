@@ -268,7 +268,8 @@ void showCustomDialog(BuildContext context) {
                                         TicketCancelPageView())),
                           }
                         else
-                          {
+                          { 
+                            Navigator.pop(context),
                             blockedPopup(context),
                           }
                       },
@@ -335,6 +336,7 @@ void blockedPopup(BuildContext context) {
               child: Text('Estás blockeado até\n${getNextDay()}'),
             ),
           ),
+        
         ),
       );
     },
