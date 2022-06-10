@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:image/image.dart';
+import 'package:uni/model/UniTicket/AcademicServices.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
 import 'package:uni/view/Widgets/terms_and_conditions.dart';
 import 'package:uni/view/Pages/cancel_ticket_page.dart';
+import '../../model/UniTicket/Client.dart';
+import 'package:uni/main.dart' as academic;
 
 var ticketNumber = null;
+var realTicketNumber = null;
 var areaChoosen = null;
 
+void setHasTicket(bool value) {
+  hasTicket = value;
+}
+
 String getTicket() {
-  return ticketNumber.toString();
+  return realTicketNumber.toString();
 }
 
 List getArea() {
@@ -20,6 +28,7 @@ List getArea() {
   return [areaChoosen, name];
 }
 
+//Client client = Client();
 
 class TicketPageView extends StatefulWidget {
   @override
@@ -28,8 +37,23 @@ class TicketPageView extends StatefulWidget {
 
 /// Manages the 'ticket' section of the app.
 class TicketPageViewState extends GeneralPageViewState {
+  AcademicServices academicServices = AcademicServices();
+  void _updateServices() {
+    setState(() {
+      academicServices.getHttpInfo();
+    });
+  }
+
   @override
   Widget getBody(BuildContext context) {
+    academicServices.getHttpInfo();
+    String secA = academicServices.getSecA();
+    String secB = academicServices.getSecB();
+    String secC = academicServices.getSecC();
+    String waitA = academicServices.getWaitA();
+    String waitB = academicServices.getWaitB();
+    String waitC = academicServices.getWaitC();
+
     final MediaQueryData queryData = MediaQuery.of(context);
     return ListView(children: <Widget>[
       Container(
@@ -52,9 +76,9 @@ class TicketPageViewState extends GeneralPageViewState {
                   ),
                 ],
               ),
-              makeBoxCard('A', '025', '02'),
-              makeBoxCard('B', '025', '05'),
-              makeBoxCard('C', '025', '25'),
+              makeBoxCard('A', secA, waitA),
+              makeBoxCard('B', secB, waitB),
+              makeBoxCard('C', secC, waitC),
             ],
           )),
 
@@ -95,6 +119,7 @@ class TicketPageViewState extends GeneralPageViewState {
       )
     ]);
   }
+//
 }
 
 void helpPopUp(BuildContext context) {
@@ -113,12 +138,12 @@ void helpPopUp(BuildContext context) {
               color: Colors.white, borderRadius: BorderRadius.circular(20)),
           child: Center(
             child: DefaultTextStyle(
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
-              child: Text('Desenrasca-te LOL'),
+              child: Text('A - Secretaria\nB - Tesouraria\nC - Outro Serviço'),
             ),
           ),
         ),
@@ -213,7 +238,8 @@ void showCustomDialog(BuildContext context) {
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Colors.black),
-                      child: Text('Confirmar senha $areaChoosen$ticketNumber?'),
+                      child: Text(
+                          'Confirmar senha $areaChoosen$realTicketNumber?'),
                     ),
                   ),
                   margin: EdgeInsets.fromLTRB(30, 50, 30, 50),
@@ -222,20 +248,32 @@ void showCustomDialog(BuildContext context) {
                   Container(
                     margin: EdgeInsets.only(right: 30),
                     child: ElevatedButton(
-                        key: const Key('ConfirmarSimButton'), //test
-                        child: Text('Sim', style: TextStyle(fontSize: 15)),
-                        style: ButtonStyle(
-                            minimumSize:
-                                MaterialStateProperty.all(Size(120, 40)),
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ))),
-
-                        onPressed: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => TicketCancelPageView()))),
+                      key: const Key('ConfirmarSimButton'), //test
+                      child: Text('Sim', style: TextStyle(fontSize: 15)),
+                      style: ButtonStyle(
+                          minimumSize: MaterialStateProperty.all(Size(120, 40)),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ))),
+                      onPressed: () => {
+                        if (!getBlocked())
+                          {
+                            setHasTicket(true),
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        TicketCancelPageView())),
+                          }
+                        else
+                          { 
+                            Navigator.pop(context),
+                            blockedPopup(context),
+                          }
+                      },
+                    ),
                   ),
                   Container(
                     child: ElevatedButton(
@@ -253,6 +291,53 @@ void showCustomDialog(BuildContext context) {
                 ]),
               ],
             )),
+      );
+    },
+    transitionBuilder: (_, anim, __, child) {
+      Tween<Offset> tween;
+      if (anim.status == AnimationStatus.reverse) {
+        tween = Tween(begin: Offset(-1, 0), end: Offset.zero);
+      } else {
+        tween = Tween(begin: Offset(1, 0), end: Offset.zero);
+      }
+
+      return SlideTransition(
+        position: tween.animate(anim),
+        child: FadeTransition(
+          opacity: anim,
+          child: child,
+        ),
+      );
+    },
+  );
+}
+
+void blockedPopup(BuildContext context) {
+  showGeneralDialog(
+    context: context,
+    barrierLabel: "blocked",
+    barrierDismissible: true,
+    barrierColor: Colors.black.withOpacity(0.5),
+    transitionDuration: Duration(milliseconds: 500),
+    pageBuilder: (_, __, ___) {
+      return Center(
+        child: Container(
+          height: 200,
+          margin: EdgeInsets.symmetric(horizontal: 20),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(20)),
+          child: Center(
+            child: DefaultTextStyle(
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black),
+              child: Text('Estás blockeado até\n${getNextDay()}'),
+            ),
+          ),
+        
+        ),
       );
     },
     transitionBuilder: (_, anim, __, child) {
@@ -296,11 +381,9 @@ Widget makeBoxInf() {
           ),
           Container(
             child: Text(
-
-                'Horário de atendimento: 11h às 16h .\nEmissão de Senha: 10h30 às 15h30 .',
-                key: const Key('work_information'),
-          ),
-
+              'Horário de atendimento: 11h às 16h .\nEmissão de Senha: 10h30 às 15h30.',
+              key: const Key('work_information'),
+            ),
           ),
           Container(
             margin: EdgeInsets.only(top: 20),
@@ -323,16 +406,17 @@ Widget makeBoxInf() {
 }
 
 Widget makeBoxCard(String letra, String numero, String quantidade) {
-
   return Container(
       child: InkWell(
-
           onTap: () => {
+                realTicketNumber =
+                    int.parse(numero) + int.parse(quantidade) + 1,
                 ticketNumber = int.parse(numero),
                 areaChoosen = letra,
                 //print('NUMERO: $ticketNumber\nAREA: $areaChoosen')
               },
           onLongPress: () => {
+                realTicketNumber = null,
                 ticketNumber = null,
                 areaChoosen = null,
                 //print('NUMERO: $ticketNumber\nAREA: $areaChoosen')
@@ -375,4 +459,3 @@ Widget makeBoxCard(String letra, String numero, String quantidade) {
                 ],
               ))));
 }
-

@@ -72,9 +72,6 @@ The need to coordinate , manipulate, and handles input from users interactions :
 **Academic Services TV Screen**
  * Queue and service status presented on the Academic Services TV screen.
 
-**Ticketing Paper Method**
-* Ticket dispenser machine near the Academic Services. 
-
 **Ticket Managment**
  * Interface in the staff computers that allows to skip the tickets.
 

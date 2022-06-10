@@ -22,8 +22,12 @@ import 'package:uni/view/Pages/splash_page_view.dart';
 import 'package:uni/view/Widgets/page_transition.dart';
 import 'package:uni/view/navigation_service.dart';
 import 'package:uni/view/theme.dart';
+import 'package:uni/view/Pages/cancel_ticket_page.dart';
+import '../../model/UniTicket/Client.dart';
+import 'package:uni/model/UniTicket/Client.dart';
 
 import 'controller/on_start_up.dart';
+import 'model/UniTicket/AcademicServices.dart';
 import 'model/schedule_page_model.dart';
 
 /// Stores the state of the app
@@ -54,6 +58,8 @@ Future<void> main() async {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
+    AcademicServices academicServices = AcademicServices();
+    academicServices.getHttpInfo();
     return MyAppState(
         state: Store<AppState>(appReducers,
             /* Function defined in the reducers file */
@@ -70,6 +76,8 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final AcademicServices academicServices = AcademicServices();
+    academicServices.getHttpInfo();
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
@@ -99,6 +107,10 @@ class MyAppState extends State<MyApp> {
                 return PageTransition.makePageTransition(
                     page: AboutPageView(), settings: settings);
               case '/' + Constants.navTicket:
+                if (gethasTicket() == true) {
+                  return PageTransition.makePageTransition(
+                      page: TicketCancelPageView(), settings: settings);
+                }
                 return PageTransition.makePageTransition(
                     page: TicketPageView(), settings: settings);
               case '/' + Constants.navBugReport:
